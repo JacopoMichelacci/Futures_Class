@@ -1,0 +1,5888 @@
+{
+  "provenance": "Entirely synthetic hand-authored/generated constants. Not market observations, not a real CBOT calendar, not results of any research rule. Fixed holdings isolate accounting; they do not represent a constructed constant-maturity portfolio.",
+  "spec_version": "8.0",
+  "fixture_format": "section0_phase_a_cases_v1",
+  "fixed_aum": "1000000",
+  "benchmark_strategy": "benchmark",
+  "strategies": [
+    "benchmark",
+    "fixture_baseline",
+    "half_size_fixture"
+  ],
+  "return_dates": [
+    "2030-02-01",
+    "2030-02-04",
+    "2030-02-05",
+    "2030-02-06"
+  ],
+  "snapshot_end_exclusive": "2030-02-07T00:00:00Z",
+  "calendar": [
+    {
+      "trading_date": "2030-01-02",
+      "settlement_at": "2030-01-02T18:15:00Z",
+      "decision_cutoff": "2030-01-02T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-03",
+      "settlement_at": "2030-01-03T18:15:00Z",
+      "decision_cutoff": "2030-01-03T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-04",
+      "settlement_at": "2030-01-04T18:15:00Z",
+      "decision_cutoff": "2030-01-04T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-07",
+      "settlement_at": "2030-01-07T18:15:00Z",
+      "decision_cutoff": "2030-01-07T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-08",
+      "settlement_at": "2030-01-08T18:15:00Z",
+      "decision_cutoff": "2030-01-08T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-09",
+      "settlement_at": "2030-01-09T18:15:00Z",
+      "decision_cutoff": "2030-01-09T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-10",
+      "settlement_at": "2030-01-10T18:15:00Z",
+      "decision_cutoff": "2030-01-10T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-11",
+      "settlement_at": "2030-01-11T18:15:00Z",
+      "decision_cutoff": "2030-01-11T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-14",
+      "settlement_at": "2030-01-14T18:15:00Z",
+      "decision_cutoff": "2030-01-14T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-15",
+      "settlement_at": "2030-01-15T18:15:00Z",
+      "decision_cutoff": "2030-01-15T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-16",
+      "settlement_at": "2030-01-16T18:15:00Z",
+      "decision_cutoff": "2030-01-16T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-17",
+      "settlement_at": "2030-01-17T18:15:00Z",
+      "decision_cutoff": "2030-01-17T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-18",
+      "settlement_at": "2030-01-18T18:15:00Z",
+      "decision_cutoff": "2030-01-18T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-22",
+      "settlement_at": "2030-01-22T18:15:00Z",
+      "decision_cutoff": "2030-01-22T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-23",
+      "settlement_at": "2030-01-23T18:15:00Z",
+      "decision_cutoff": "2030-01-23T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-24",
+      "settlement_at": "2030-01-24T18:15:00Z",
+      "decision_cutoff": "2030-01-24T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-25",
+      "settlement_at": "2030-01-25T18:15:00Z",
+      "decision_cutoff": "2030-01-25T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-28",
+      "settlement_at": "2030-01-28T18:15:00Z",
+      "decision_cutoff": "2030-01-28T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-29",
+      "settlement_at": "2030-01-29T18:15:00Z",
+      "decision_cutoff": "2030-01-29T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-30",
+      "settlement_at": "2030-01-30T18:15:00Z",
+      "decision_cutoff": "2030-01-30T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-01-31",
+      "settlement_at": "2030-01-31T18:15:00Z",
+      "decision_cutoff": "2030-01-31T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-01",
+      "settlement_at": "2030-02-01T18:15:00Z",
+      "decision_cutoff": "2030-02-01T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-04",
+      "settlement_at": "2030-02-04T18:15:00Z",
+      "decision_cutoff": "2030-02-04T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-05",
+      "settlement_at": "2030-02-05T17:15:00Z",
+      "decision_cutoff": "2030-02-05T17:10:00Z"
+    },
+    {
+      "trading_date": "2030-02-06",
+      "settlement_at": "2030-02-06T18:15:00Z",
+      "decision_cutoff": "2030-02-06T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-07",
+      "settlement_at": "2030-02-07T18:15:00Z",
+      "decision_cutoff": "2030-02-07T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-08",
+      "settlement_at": "2030-02-08T18:15:00Z",
+      "decision_cutoff": "2030-02-08T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-11",
+      "settlement_at": "2030-02-11T18:15:00Z",
+      "decision_cutoff": "2030-02-11T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-12",
+      "settlement_at": "2030-02-12T18:15:00Z",
+      "decision_cutoff": "2030-02-12T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-13",
+      "settlement_at": "2030-02-13T18:15:00Z",
+      "decision_cutoff": "2030-02-13T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-14",
+      "settlement_at": "2030-02-14T18:15:00Z",
+      "decision_cutoff": "2030-02-14T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-15",
+      "settlement_at": "2030-02-15T18:15:00Z",
+      "decision_cutoff": "2030-02-15T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-18",
+      "settlement_at": "2030-02-18T18:15:00Z",
+      "decision_cutoff": "2030-02-18T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-19",
+      "settlement_at": "2030-02-19T18:15:00Z",
+      "decision_cutoff": "2030-02-19T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-20",
+      "settlement_at": "2030-02-20T18:15:00Z",
+      "decision_cutoff": "2030-02-20T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-21",
+      "settlement_at": "2030-02-21T18:15:00Z",
+      "decision_cutoff": "2030-02-21T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-22",
+      "settlement_at": "2030-02-22T18:15:00Z",
+      "decision_cutoff": "2030-02-22T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-25",
+      "settlement_at": "2030-02-25T18:15:00Z",
+      "decision_cutoff": "2030-02-25T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-26",
+      "settlement_at": "2030-02-26T18:15:00Z",
+      "decision_cutoff": "2030-02-26T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-27",
+      "settlement_at": "2030-02-27T18:15:00Z",
+      "decision_cutoff": "2030-02-27T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-02-28",
+      "settlement_at": "2030-02-28T18:15:00Z",
+      "decision_cutoff": "2030-02-28T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-01",
+      "settlement_at": "2030-03-01T18:15:00Z",
+      "decision_cutoff": "2030-03-01T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-04",
+      "settlement_at": "2030-03-04T18:15:00Z",
+      "decision_cutoff": "2030-03-04T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-05",
+      "settlement_at": "2030-03-05T18:15:00Z",
+      "decision_cutoff": "2030-03-05T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-06",
+      "settlement_at": "2030-03-06T18:15:00Z",
+      "decision_cutoff": "2030-03-06T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-07",
+      "settlement_at": "2030-03-07T18:15:00Z",
+      "decision_cutoff": "2030-03-07T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-08",
+      "settlement_at": "2030-03-08T18:15:00Z",
+      "decision_cutoff": "2030-03-08T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-11",
+      "settlement_at": "2030-03-11T18:15:00Z",
+      "decision_cutoff": "2030-03-11T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-12",
+      "settlement_at": "2030-03-12T18:15:00Z",
+      "decision_cutoff": "2030-03-12T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-13",
+      "settlement_at": "2030-03-13T18:15:00Z",
+      "decision_cutoff": "2030-03-13T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-14",
+      "settlement_at": "2030-03-14T18:15:00Z",
+      "decision_cutoff": "2030-03-14T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-15",
+      "settlement_at": "2030-03-15T18:15:00Z",
+      "decision_cutoff": "2030-03-15T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-18",
+      "settlement_at": "2030-03-18T18:15:00Z",
+      "decision_cutoff": "2030-03-18T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-19",
+      "settlement_at": "2030-03-19T18:15:00Z",
+      "decision_cutoff": "2030-03-19T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-20",
+      "settlement_at": "2030-03-20T18:15:00Z",
+      "decision_cutoff": "2030-03-20T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-21",
+      "settlement_at": "2030-03-21T18:15:00Z",
+      "decision_cutoff": "2030-03-21T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-22",
+      "settlement_at": "2030-03-22T18:15:00Z",
+      "decision_cutoff": "2030-03-22T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-25",
+      "settlement_at": "2030-03-25T18:15:00Z",
+      "decision_cutoff": "2030-03-25T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-26",
+      "settlement_at": "2030-03-26T18:15:00Z",
+      "decision_cutoff": "2030-03-26T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-27",
+      "settlement_at": "2030-03-27T18:15:00Z",
+      "decision_cutoff": "2030-03-27T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-28",
+      "settlement_at": "2030-03-28T18:15:00Z",
+      "decision_cutoff": "2030-03-28T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-03-29",
+      "settlement_at": "2030-03-29T18:15:00Z",
+      "decision_cutoff": "2030-03-29T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-01",
+      "settlement_at": "2030-04-01T18:15:00Z",
+      "decision_cutoff": "2030-04-01T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-02",
+      "settlement_at": "2030-04-02T18:15:00Z",
+      "decision_cutoff": "2030-04-02T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-03",
+      "settlement_at": "2030-04-03T18:15:00Z",
+      "decision_cutoff": "2030-04-03T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-04",
+      "settlement_at": "2030-04-04T18:15:00Z",
+      "decision_cutoff": "2030-04-04T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-05",
+      "settlement_at": "2030-04-05T18:15:00Z",
+      "decision_cutoff": "2030-04-05T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-08",
+      "settlement_at": "2030-04-08T18:15:00Z",
+      "decision_cutoff": "2030-04-08T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-09",
+      "settlement_at": "2030-04-09T18:15:00Z",
+      "decision_cutoff": "2030-04-09T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-10",
+      "settlement_at": "2030-04-10T18:15:00Z",
+      "decision_cutoff": "2030-04-10T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-11",
+      "settlement_at": "2030-04-11T18:15:00Z",
+      "decision_cutoff": "2030-04-11T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-12",
+      "settlement_at": "2030-04-12T18:15:00Z",
+      "decision_cutoff": "2030-04-12T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-15",
+      "settlement_at": "2030-04-15T18:15:00Z",
+      "decision_cutoff": "2030-04-15T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-16",
+      "settlement_at": "2030-04-16T18:15:00Z",
+      "decision_cutoff": "2030-04-16T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-17",
+      "settlement_at": "2030-04-17T18:15:00Z",
+      "decision_cutoff": "2030-04-17T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-18",
+      "settlement_at": "2030-04-18T18:15:00Z",
+      "decision_cutoff": "2030-04-18T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-19",
+      "settlement_at": "2030-04-19T18:15:00Z",
+      "decision_cutoff": "2030-04-19T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-22",
+      "settlement_at": "2030-04-22T18:15:00Z",
+      "decision_cutoff": "2030-04-22T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-23",
+      "settlement_at": "2030-04-23T18:15:00Z",
+      "decision_cutoff": "2030-04-23T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-24",
+      "settlement_at": "2030-04-24T18:15:00Z",
+      "decision_cutoff": "2030-04-24T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-25",
+      "settlement_at": "2030-04-25T18:15:00Z",
+      "decision_cutoff": "2030-04-25T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-26",
+      "settlement_at": "2030-04-26T18:15:00Z",
+      "decision_cutoff": "2030-04-26T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-29",
+      "settlement_at": "2030-04-29T18:15:00Z",
+      "decision_cutoff": "2030-04-29T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-04-30",
+      "settlement_at": "2030-04-30T18:15:00Z",
+      "decision_cutoff": "2030-04-30T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-01",
+      "settlement_at": "2030-05-01T18:15:00Z",
+      "decision_cutoff": "2030-05-01T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-02",
+      "settlement_at": "2030-05-02T18:15:00Z",
+      "decision_cutoff": "2030-05-02T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-03",
+      "settlement_at": "2030-05-03T18:15:00Z",
+      "decision_cutoff": "2030-05-03T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-06",
+      "settlement_at": "2030-05-06T18:15:00Z",
+      "decision_cutoff": "2030-05-06T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-07",
+      "settlement_at": "2030-05-07T18:15:00Z",
+      "decision_cutoff": "2030-05-07T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-08",
+      "settlement_at": "2030-05-08T18:15:00Z",
+      "decision_cutoff": "2030-05-08T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-09",
+      "settlement_at": "2030-05-09T18:15:00Z",
+      "decision_cutoff": "2030-05-09T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-10",
+      "settlement_at": "2030-05-10T18:15:00Z",
+      "decision_cutoff": "2030-05-10T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-13",
+      "settlement_at": "2030-05-13T18:15:00Z",
+      "decision_cutoff": "2030-05-13T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-14",
+      "settlement_at": "2030-05-14T18:15:00Z",
+      "decision_cutoff": "2030-05-14T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-15",
+      "settlement_at": "2030-05-15T18:15:00Z",
+      "decision_cutoff": "2030-05-15T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-16",
+      "settlement_at": "2030-05-16T18:15:00Z",
+      "decision_cutoff": "2030-05-16T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-17",
+      "settlement_at": "2030-05-17T18:15:00Z",
+      "decision_cutoff": "2030-05-17T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-20",
+      "settlement_at": "2030-05-20T18:15:00Z",
+      "decision_cutoff": "2030-05-20T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-21",
+      "settlement_at": "2030-05-21T18:15:00Z",
+      "decision_cutoff": "2030-05-21T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-22",
+      "settlement_at": "2030-05-22T18:15:00Z",
+      "decision_cutoff": "2030-05-22T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-23",
+      "settlement_at": "2030-05-23T18:15:00Z",
+      "decision_cutoff": "2030-05-23T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-24",
+      "settlement_at": "2030-05-24T18:15:00Z",
+      "decision_cutoff": "2030-05-24T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-27",
+      "settlement_at": "2030-05-27T18:15:00Z",
+      "decision_cutoff": "2030-05-27T18:15:00Z"
+    },
+    {
+      "trading_date": "2030-05-28",
+      "settlement_at": "2030-05-28T18:15:00Z",
+      "decision_cutoff": "2030-05-28T18:15:00Z"
+    }
+  ],
+  "synthetic_non_session": "2030-01-21",
+  "contracts": [
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1001,
+      "contract": "ZC_SYN_NEAR",
+      "root": "ZC",
+      "activation": "2030-01-02",
+      "anchor": "2030-02-08",
+      "expiration": "2030-02-12",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1002,
+      "contract": "ZC_SYN_NEXT",
+      "root": "ZC",
+      "activation": "2030-01-02",
+      "anchor": "2030-04-18",
+      "expiration": "2030-04-22",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1003,
+      "contract": "ZC_SYN_FAR",
+      "root": "ZC",
+      "activation": "2030-01-02",
+      "anchor": "2030-05-23",
+      "expiration": "2030-05-27",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1004,
+      "contract": "ZS_SYN_NEAR",
+      "root": "ZS",
+      "activation": "2030-01-02",
+      "anchor": "2030-03-14",
+      "expiration": "2030-03-18",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1005,
+      "contract": "ZS_SYN_NEXT",
+      "root": "ZS",
+      "activation": "2030-01-02",
+      "anchor": "2030-04-18",
+      "expiration": "2030-04-22",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1006,
+      "contract": "ZS_SYN_FAR",
+      "root": "ZS",
+      "activation": "2030-01-02",
+      "anchor": "2030-05-23",
+      "expiration": "2030-05-27",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1007,
+      "contract": "ZW_SYN_NEAR",
+      "root": "ZW",
+      "activation": "2030-01-02",
+      "anchor": "2030-03-14",
+      "expiration": "2030-03-18",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1008,
+      "contract": "ZW_SYN_NEXT",
+      "root": "ZW",
+      "activation": "2030-01-02",
+      "anchor": "2030-04-18",
+      "expiration": "2030-04-22",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    },
+    {
+      "dataset": "GLBX.MDP3",
+      "publisher_id": 1,
+      "instrument_id": 1009,
+      "contract": "ZW_SYN_FAR",
+      "root": "ZW",
+      "activation": "2030-01-02",
+      "anchor": "2030-05-23",
+      "expiration": "2030-05-27",
+      "dollars_per_price_unit": "50",
+      "anchor_source": "synthetic fixture, not CME metadata"
+    }
+  ],
+  "observations": [
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1000",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5000",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1010",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5010",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1020",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5020",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1030",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5030",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1040",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5040",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1050",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5050",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1060",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5060",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1070",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5070",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1080",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5080",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1090",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5090",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1100",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5100",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1110",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5110",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1120",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5120",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1130",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5130",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1140",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5140",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1150",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5150",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1160",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5160",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1170",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5170",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1180",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5180",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1190",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5190",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1200",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5200",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1210",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5210",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1220",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5220",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1100",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5100",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1110",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5110",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1120",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5120",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1130",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5130",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1140",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5140",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1150",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5150",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1160",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5160",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1170",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5170",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1180",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5180",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1190",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5190",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1200",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5200",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1210",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5210",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1220",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5220",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1230",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5230",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1240",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5240",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1250",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5250",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1260",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5260",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1270",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5270",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1280",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5280",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1290",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5290",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1300",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5300",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1310",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5310",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1320",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5320",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1200",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5200",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1210",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5210",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1220",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5220",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1230",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5230",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1240",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5240",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1250",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5250",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1260",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5260",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1270",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5270",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1280",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5280",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1290",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5290",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1300",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5300",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1310",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5310",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1320",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5320",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1330",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5330",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1340",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5340",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1350",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5350",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1360",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5360",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1370",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5370",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1380",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5380",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1390",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5390",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1400",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5400",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1410",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5410",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1420",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5420",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1300",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5300",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1310",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5310",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1320",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5320",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1330",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5330",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1340",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5340",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1350",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5350",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1360",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5360",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1370",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5370",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1380",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5380",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1390",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5390",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1400",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5400",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1410",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5410",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1420",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5420",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1430",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5430",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1440",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5440",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1450",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5450",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1460",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5460",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1470",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5470",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1480",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5480",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1490",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5490",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1500",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5500",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1510",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5510",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1520",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5520",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1400",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5400",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1410",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5410",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1420",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5420",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1430",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5430",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1440",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5440",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1450",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5450",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1460",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5460",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1470",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5470",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1480",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5480",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1490",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5490",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1500",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5500",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1510",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5510",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1520",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5520",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1530",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5530",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1540",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5540",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1550",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5550",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1560",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5560",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1570",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5570",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1580",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5580",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1590",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5590",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1600",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5600",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1610",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5610",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1620",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5620",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1500",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5500",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1510",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5510",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1520",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5520",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1530",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5530",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1540",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5540",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1550",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5550",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1560",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5560",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1570",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5570",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1580",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5580",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1590",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5590",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1600",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5600",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1610",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5610",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1620",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5620",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1630",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5630",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1640",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5640",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1650",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5650",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1660",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5660",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1670",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5670",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1680",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5680",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1690",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5690",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1700",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5700",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1710",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5710",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1720",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5720",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1600",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5600",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1610",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5610",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1620",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5620",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1630",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5630",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1640",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5640",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1650",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5650",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1660",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5660",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1670",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5670",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1680",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5680",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1690",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5690",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1700",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5700",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1710",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5710",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1720",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5720",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1730",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5730",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1740",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5740",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1750",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5750",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1760",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5760",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1770",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5770",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1780",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5780",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1790",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5790",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1800",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5800",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1810",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5810",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1820",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5820",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1700",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5700",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1710",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5710",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1720",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5720",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1730",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5730",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1740",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5740",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1750",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5750",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1760",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5760",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1770",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5770",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1780",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5780",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1790",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5790",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1800",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5800",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1810",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5810",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1820",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5820",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1830",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5830",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1840",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5840",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1850",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5850",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1860",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5860",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1870",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5870",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1880",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5880",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1890",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5890",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1900",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "5900",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1910",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "5910",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1920",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5920",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1800",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-02",
+      "statistic_type": "open_interest",
+      "statistic_value": "5800",
+      "publication_timestamp": "2030-01-03T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1810",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-03",
+      "statistic_type": "open_interest",
+      "statistic_value": "5810",
+      "publication_timestamp": "2030-01-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1820",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "5820",
+      "publication_timestamp": "2030-01-07T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1830",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-07",
+      "statistic_type": "open_interest",
+      "statistic_value": "5830",
+      "publication_timestamp": "2030-01-08T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1840",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-08",
+      "statistic_type": "open_interest",
+      "statistic_value": "5840",
+      "publication_timestamp": "2030-01-09T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1850",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-09",
+      "statistic_type": "open_interest",
+      "statistic_value": "5850",
+      "publication_timestamp": "2030-01-10T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1860",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-10",
+      "statistic_type": "open_interest",
+      "statistic_value": "5860",
+      "publication_timestamp": "2030-01-11T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1870",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-11",
+      "statistic_type": "open_interest",
+      "statistic_value": "5870",
+      "publication_timestamp": "2030-01-14T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1880",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-14",
+      "statistic_type": "open_interest",
+      "statistic_value": "5880",
+      "publication_timestamp": "2030-01-15T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1890",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-15",
+      "statistic_type": "open_interest",
+      "statistic_value": "5890",
+      "publication_timestamp": "2030-01-16T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1900",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-16",
+      "statistic_type": "open_interest",
+      "statistic_value": "5900",
+      "publication_timestamp": "2030-01-17T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1910",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-17",
+      "statistic_type": "open_interest",
+      "statistic_value": "5910",
+      "publication_timestamp": "2030-01-18T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1920",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-18",
+      "statistic_type": "open_interest",
+      "statistic_value": "5920",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1930",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-22",
+      "statistic_type": "open_interest",
+      "statistic_value": "5930",
+      "publication_timestamp": "2030-01-23T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1940",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-23",
+      "statistic_type": "open_interest",
+      "statistic_value": "5940",
+      "publication_timestamp": "2030-01-24T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1950",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-24",
+      "statistic_type": "open_interest",
+      "statistic_value": "5950",
+      "publication_timestamp": "2030-01-25T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1960",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-25",
+      "statistic_type": "open_interest",
+      "statistic_value": "5960",
+      "publication_timestamp": "2030-01-28T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1970",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-28",
+      "statistic_type": "open_interest",
+      "statistic_value": "5970",
+      "publication_timestamp": "2030-01-29T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1980",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-29",
+      "statistic_type": "open_interest",
+      "statistic_value": "5980",
+      "publication_timestamp": "2030-01-30T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "1990",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "open_interest",
+      "statistic_value": "5990",
+      "publication_timestamp": "2030-01-31T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "2000",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "open_interest",
+      "statistic_value": "6000",
+      "publication_timestamp": "2030-02-01T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "2010",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "open_interest",
+      "statistic_value": "6010",
+      "publication_timestamp": "2030-02-04T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "2020",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "open_interest",
+      "statistic_value": "6020",
+      "publication_timestamp": "2030-02-05T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-21",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "0",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-21",
+      "statistic_type": "open_interest",
+      "statistic_value": "5000",
+      "publication_timestamp": "2030-01-22T10:00:00Z",
+      "stat_flags": 0,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-30",
+      "statistic_type": "cleared_volume",
+      "statistic_value": "999999",
+      "publication_timestamp": "2030-01-31T19:00:00Z",
+      "stat_flags": 0,
+      "sequence": 2
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "400",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "401",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "405",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "406",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "408",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "1000",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "998",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "1000",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "999",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_NEXT",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "1002",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "1000",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "999",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "1001",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "1001.5",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEAR",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "1002",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "600",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "602",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "603",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "604",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "605",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "1200",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "1201",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "1204",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "1203",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZC_SYN_FAR",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "1206",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "1030",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "1029",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "1032",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "1031",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_NEXT",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "1033",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "1060",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "1061",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "1062",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "1063",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZS_SYN_FAR",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "1064",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "630",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "632",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "633",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "631",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_NEXT",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "634",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-01-31",
+      "statistic_type": "settlement",
+      "statistic_value": "660",
+      "publication_timestamp": "2030-01-31T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-01",
+      "statistic_type": "settlement",
+      "statistic_value": "661",
+      "publication_timestamp": "2030-02-01T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-04",
+      "statistic_type": "settlement",
+      "statistic_value": "663",
+      "publication_timestamp": "2030-02-04T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-05",
+      "statistic_type": "settlement",
+      "statistic_value": "662",
+      "publication_timestamp": "2030-02-05T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    },
+    {
+      "contract": "ZW_SYN_FAR",
+      "trading_date": "2030-02-06",
+      "statistic_type": "settlement",
+      "statistic_value": "665",
+      "publication_timestamp": "2030-02-06T23:00:00Z",
+      "stat_flags": 3,
+      "sequence": 1
+    }
+  ],
+  "holdings": [
+    {
+      "date": "2030-02-01",
+      "strategy": "benchmark",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "benchmark",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "benchmark",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "fixture_baseline",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "fixture_baseline",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "fixture_baseline",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "half_size_fixture",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "half_size_fixture",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-01",
+      "strategy": "half_size_fixture",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-01-31T18:15:00Z",
+      "formed_at": "2030-01-31T09:00:00Z",
+      "inputs_as_of": "2030-01-31T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "benchmark",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "benchmark",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "benchmark",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "fixture_baseline",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "fixture_baseline",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "fixture_baseline",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "half_size_fixture",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "half_size_fixture",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-04",
+      "strategy": "half_size_fixture",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-01T18:15:00Z",
+      "formed_at": "2030-02-01T09:00:00Z",
+      "inputs_as_of": "2030-02-01T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "benchmark",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "benchmark",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "benchmark",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "fixture_baseline",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "fixture_baseline",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "fixture_baseline",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "half_size_fixture",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "half_size_fixture",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-05",
+      "strategy": "half_size_fixture",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-04T18:15:00Z",
+      "formed_at": "2030-02-04T09:00:00Z",
+      "inputs_as_of": "2030-02-04T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "benchmark",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "benchmark",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "benchmark",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": "2",
+      "implemented_contracts": null,
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": null,
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "fixture_baseline",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "fixture_baseline",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "fixture_baseline",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "2",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "2"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "half_size_fixture",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "half_size_fixture",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    },
+    {
+      "date": "2030-02-06",
+      "strategy": "half_size_fixture",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "decision_cutoff": "2030-02-05T17:10:00Z",
+      "formed_at": "2030-02-05T09:00:00Z",
+      "inputs_as_of": "2030-02-05T08:00:00Z",
+      "benchmark_fractional_contracts": null,
+      "implemented_contracts": "1",
+      "details": {
+        "flags": [
+          "SYNTHETIC_ACCOUNTING_ONLY"
+        ],
+        "capacity_limit_contracts": "20",
+        "pre_capacity_contracts": "1"
+      }
+    }
+  ],
+  "eligible_curve": [
+    {
+      "date": "2030-01-31",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEAR",
+      "anchor": "2030-02-08",
+      "days_to_anchor": 6,
+      "maturity_rank": 1,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEXT",
+      "anchor": "2030-04-18",
+      "days_to_anchor": 55,
+      "maturity_rank": 2,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZC",
+      "contract": "ZC_SYN_FAR",
+      "anchor": "2030-05-23",
+      "days_to_anchor": 80,
+      "maturity_rank": 3,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "anchor": "2030-03-14",
+      "days_to_anchor": 30,
+      "maturity_rank": 1,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEXT",
+      "anchor": "2030-04-18",
+      "days_to_anchor": 55,
+      "maturity_rank": 2,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZS",
+      "contract": "ZS_SYN_FAR",
+      "anchor": "2030-05-23",
+      "days_to_anchor": 80,
+      "maturity_rank": 3,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "anchor": "2030-03-14",
+      "days_to_anchor": 30,
+      "maturity_rank": 1,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEXT",
+      "anchor": "2030-04-18",
+      "days_to_anchor": 55,
+      "maturity_rank": 2,
+      "eligible": true
+    },
+    {
+      "date": "2030-01-31",
+      "commodity": "ZW",
+      "contract": "ZW_SYN_FAR",
+      "anchor": "2030-05-23",
+      "days_to_anchor": 80,
+      "maturity_rank": 3,
+      "eligible": true
+    }
+  ],
+  "roll_events": [
+    {
+      "date": "2030-02-01",
+      "commodity": "ZC",
+      "outgoing_contract": "ZC_SYN_NEAR",
+      "baseline_destination": "ZC_SYN_NEXT",
+      "anchor": "2030-02-08",
+      "note": "Hand-specified frozen baseline event, five sessions before the outgoing anchor; not a generated state machine."
+    }
+  ],
+  "interpolation_cases": [
+    {
+      "days": {
+        "near": 35,
+        "far": 85
+      },
+      "expected_weights": {
+        "near": "0.5",
+        "far": "0.5"
+      },
+      "fallback": false
+    },
+    {
+      "days": {
+        "exact": 60
+      },
+      "expected_weights": {
+        "exact": "1"
+      },
+      "fallback": false
+    },
+    {
+      "days": {
+        "near": 30,
+        "far": 40
+      },
+      "expected_weights": {
+        "far": "1"
+      },
+      "fallback": true
+    }
+  ],
+  "expected": {
+    "benchmark_pnl": [
+      "200",
+      "500",
+      "50",
+      "450"
+    ],
+    "half_pnl": [
+      "100",
+      "250",
+      "25",
+      "225"
+    ],
+    "identical_rmse_bps": "0",
+    "half_rmse_squared_bps": "3.09375",
+    "asof_adv20_near_zc": "1095"
+  },
+  "perturbations": {
+    "missing_settlement": {
+      "contract": "ZW_SYN_NEAR",
+      "trading_date": "2030-02-04"
+    },
+    "missing_volume": {
+      "contract": "ZC_SYN_NEAR",
+      "trading_date": "2030-01-16"
+    }
+  },
+  "post_capacity_targets": [
+    {
+      "commodity": "ZC",
+      "contract": "ZC_SYN_NEAR",
+      "target_weight": "0.333333",
+      "target_notional": "333333",
+      "dollar_contract_notional": "20000",
+      "post_capacity_fractional_contracts": "16.66665",
+      "capacity_limit_contracts": "20"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZS_SYN_NEAR",
+      "target_weight": "0.333333",
+      "target_notional": "333333",
+      "dollar_contract_notional": "50000",
+      "post_capacity_fractional_contracts": "6.66666",
+      "capacity_limit_contracts": "20"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZW_SYN_NEAR",
+      "target_weight": "0.333334",
+      "target_notional": "333334",
+      "dollar_contract_notional": "30000",
+      "post_capacity_fractional_contracts": "11.11113333333333333333333333",
+      "capacity_limit_contracts": "20"
+    }
+  ],
+  "post_capacity_targets_note": "Separate hand-input case for downstream integer-quantity interfaces. Supplied ceilings are test constraints, not outputs of a capacity implementation; no rounding rule is run here.",
+  "baseline_path_case": {
+    "note": "Explicit synthetic decision-time curves and independently specified expected active contracts. No quantity sizing, capacity or rounding.",
+    "decision_dates": [
+      "2030-01-30",
+      "2030-01-31",
+      "2030-02-01",
+      "2030-02-04",
+      "2030-02-05",
+      "2030-02-06",
+      "2030-02-07",
+      "2030-02-08"
+    ],
+    "commodities": [
+      "ZC"
+    ],
+    "eligible_curve": [
+      {
+        "date": "2030-01-30",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 7,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-01-30",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 56,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-01-30",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 81,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-01-31",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 6,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-01-31",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 55,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-01-31",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 80,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-01",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 5,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-01",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 54,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-01",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 79,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-04",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 4,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-04",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 53,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-04",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 78,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-05",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 3,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-05",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 52,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-05",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 77,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-06",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 2,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-06",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 51,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-06",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 76,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-07",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 1,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-07",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 50,
+        "maturity_rank": 2,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-07",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 75,
+        "maturity_rank": 3,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-08",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEAR",
+        "anchor": "2030-02-08",
+        "days_to_anchor": 0,
+        "maturity_rank": null,
+        "eligible": false
+      },
+      {
+        "date": "2030-02-08",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_NEXT",
+        "anchor": "2030-04-18",
+        "days_to_anchor": 49,
+        "maturity_rank": 1,
+        "eligible": true
+      },
+      {
+        "date": "2030-02-08",
+        "commodity": "ZC",
+        "contract": "ZC_SYN_FAR",
+        "anchor": "2030-05-23",
+        "days_to_anchor": 74,
+        "maturity_rank": 2,
+        "eligible": true
+      }
+    ],
+    "expected_contracts": [
+      "ZC_SYN_NEAR",
+      "ZC_SYN_NEAR",
+      "ZC_SYN_NEXT",
+      "ZC_SYN_NEXT",
+      "ZC_SYN_NEXT",
+      "ZC_SYN_NEXT",
+      "ZC_SYN_NEXT",
+      "ZC_SYN_NEXT"
+    ]
+  }
+}
