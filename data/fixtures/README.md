@@ -21,6 +21,8 @@ Separately, `baseline_path_case` is input to the pure baseline state machine. It
 
 The hand-calculated benchmark P&L is `$200, $500, $50, $450` at a fixed `$1,000,000` AUM. The identical implementation has zero tracking RMSE. The half-sized implementation has `sqrt(3.09375) = 1.7589059099...` daily basis points of tracking RMSE. No method is selected by this demonstration.
 
+`[capacity_phase_a.json](capacity_phase_a.json)` adds hand-checkable capacity allocator cases, including a weighted allocation that hits one candidate's cap and reallocates to the other, and a no-valid-ADV20 fallback. Its portfolio case uses only the synthetic Phase A observation store to demonstrate the four Part 2 capacity approaches; it is not market data and does not select a method. See [the capacity engine guide](../../docs/capacity_phase_a.md).
+
 Load from the repository root:
 
 ```python
