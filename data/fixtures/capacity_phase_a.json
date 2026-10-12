@@ -1,0 +1,46 @@
+{
+  "spec_version": "8.0",
+  "fixture_format": "capacity_phase_a_cases_v1",
+  "provenance": "Entirely synthetic hand-check cases; no market data or performance selection.",
+  "allocation_cases": [
+    {
+      "name": "adv_weighted_reallocates_after_first_candidate_caps",
+      "residual_contracts": 20,
+      "candidates": ["first", "second"],
+      "adv20_by_contract": {"first": "100", "second": "900"},
+      "capacity_limits": {"first": 1, "second": 100},
+      "expected_allocations": {"first": 1, "second": 19},
+      "expected_unimplemented": 0
+    },
+    {
+      "name": "adv_weighted_no_valid_adv_fails_closed",
+      "residual_contracts": 10,
+      "candidates": ["first", "second"],
+      "adv20_by_contract": {"first": null, "second": "0"},
+      "capacity_limits": {"first": null, "second": 0},
+      "expected_allocations": {"first": 0, "second": 0},
+      "expected_unimplemented": 10,
+      "expected_flag": "no_valid_positive_adv20_capacity"
+    },
+    {
+      "name": "sequential_overflow_respects_each_cap",
+      "residual_contracts": 10,
+      "candidates": ["first", "second", "third"],
+      "adv20_by_contract": {},
+      "capacity_limits": {"first": 3, "second": 4, "third": 99},
+      "expected_allocations": {"first": 3, "second": 4},
+      "expected_unimplemented": 3
+    }
+  ],
+  "portfolio_case": {
+    "date": "2030-02-06",
+    "strategy": "fixture_capacity_target",
+    "commodity": "ZC",
+    "primary_contract": "ZC_SYN_NEAR",
+    "pre_capacity_contracts": "1316",
+    "target_weight": "0.333333",
+    "target_notional": "333333",
+    "curve_date": "2030-02-05",
+    "note": "Synthetic target chosen to bind the observed fixture ADV20 ceiling and exercise all three overflow alternatives."
+  }
+}
