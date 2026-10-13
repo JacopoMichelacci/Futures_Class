@@ -1,0 +1,49 @@
+{
+  "spec_version": "8.0",
+  "fixture_format": "capacity_phase_a_cases_v1",
+  "provenance": "Entirely synthetic hand-check cases; no market data or performance selection.",
+  "allocation_cases": [
+    {
+      "name": "adv_weighted_reallocates_after_first_candidate_caps",
+      "residual_notional": "1000",
+      "candidates": ["first", "second"],
+      "adv20_by_contract": {"first": "100", "second": "900"},
+      "capacity_limits": {"first": 1, "second": 100},
+      "dollar_contract_values": {"first": "50", "second": "50"},
+      "expected_allocations": {"first": "1", "second": "19"},
+      "expected_unimplemented_notional": "0"
+    },
+    {
+      "name": "adv_weighted_no_valid_adv_fails_closed",
+      "residual_notional": "1000",
+      "candidates": ["first", "second"],
+      "adv20_by_contract": {"first": null, "second": "0"},
+      "capacity_limits": {"first": null, "second": 0},
+      "dollar_contract_values": {"first": null, "second": "250"},
+      "expected_allocations": {"first": "0", "second": "0"},
+      "expected_unimplemented_notional": "1000",
+      "expected_flag": "no_valid_positive_adv20_capacity_or_value"
+    },
+    {
+      "name": "sequential_overflow_respects_each_cap",
+      "residual_notional": "1500",
+      "candidates": ["first", "second", "third"],
+      "adv20_by_contract": {},
+      "capacity_limits": {"first": 3, "second": 4, "third": 99},
+      "dollar_contract_values": {"first": "100", "second": "250", "third": "99"},
+      "expected_allocations": {"first": "3", "second": "4"},
+      "expected_unimplemented_notional": "200"
+    }
+  ],
+  "portfolio_case": {
+    "date": "2030-02-06",
+    "strategy": "fixture_capacity_target",
+    "commodity": "ZC",
+    "primary_contract": "ZC_SYN_NEAR",
+    "pre_capacity_contracts": "1400",
+    "target_weight": "0.333333",
+    "target_notional": "28350000",
+    "curve_date": "2030-02-05",
+    "note": "Synthetic target notional equals 1,400 fractional primary contracts at the decision-time value of $20,250 each; it binds the primary ceiling and exercises residual allocation."
+  }
+}
