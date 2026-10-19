@@ -1,0 +1,5 @@
+rule,tracking_rmse_bps,common_valid_dates,candidate_dates,roll_events,fallback_events,fallback_frequency,mean_sessions_before_anchor,survival,tied_with_best,preferred,experiment
+fixed_-5,17.388760,106,106,3,0,0.0000,5.00,1.0000,False,False,synthetic_part3_harness
+fixed_-10,16.828532,106,106,3,0,0.0000,10.00,1.0000,True,True,synthetic_part3_harness
+volume_crossover,16.853926,106,106,3,1,0.3333,8.00,1.0000,True,False,synthetic_part3_harness
+oi_crossover,17.300905,106,106,3,1,0.3333,6.00,1.0000,False,False,synthetic_part3_harness
