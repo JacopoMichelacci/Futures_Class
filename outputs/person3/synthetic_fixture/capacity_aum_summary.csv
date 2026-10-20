@@ -1,0 +1,17 @@
+experiment,aum_usd,method,tracking_rmse_bps,common_valid_dates,candidate_dates,survival,binding_target_count,unimplemented_notional,tied_with_best,preferred_at_aum,common_mask_gate_passed
+synthetic_part3_harness,1000000,hard_truncate,0.026014,105,105,1.0000,0,0.00,True,True,True
+synthetic_part3_harness,1000000,overflow_next,0.026014,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,1000000,overflow_sequential_two,0.026014,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,1000000,overflow_adv_weighted,0.026014,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,10000000,hard_truncate,0.004414,105,105,1.0000,0,0.00,True,True,True
+synthetic_part3_harness,10000000,overflow_next,0.004414,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,10000000,overflow_sequential_two,0.004414,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,10000000,overflow_adv_weighted,0.004414,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,100000000,hard_truncate,0.000423,105,105,1.0000,0,0.00,True,True,True
+synthetic_part3_harness,100000000,overflow_next,0.000423,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,100000000,overflow_sequential_two,0.000423,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,100000000,overflow_adv_weighted,0.000423,105,105,1.0000,0,0.00,True,False,True
+synthetic_part3_harness,1000000000,hard_truncate,1.660981,105,105,1.0000,315,57905291062.50,False,False,True
+synthetic_part3_harness,1000000000,overflow_next,1.132069,105,105,1.0000,315,38423450625.00,False,False,True
+synthetic_part3_harness,1000000000,overflow_sequential_two,0.497465,105,105,1.0000,315,14923624125.00,True,True,True
+synthetic_part3_harness,1000000000,overflow_adv_weighted,0.497546,105,105,1.0000,315,14923624125.00,True,False,True
