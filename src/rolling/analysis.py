@@ -103,9 +103,13 @@ def compare_timing_rules(experiment, min_common_dates=100, min_survival=Decimal(
     gates = {"min_common_dates": min_common_dates, "min_survival": min_survival,
              "common_valid_dates": valid, "survival": survival,
              "passed": valid >= min_common_dates and survival >= min_survival}
+    selection = select_preferred_rule({r["rule"]: r["tracking_rmse_bps"] for r in summary})
+    if not gates["passed"]:
+        # Spec: a failed coverage gate means no preferred method; RMSE stays reported.
+        selection = {**selection, "preferred_rule": None, "resolved": False,
+                     "blocked_reason": "coverage_gate_failed"}
     return {"label": experiment.label, "summary": tuple(summary), "decisions": decisions,
-            "gates": gates, "selection": select_preferred_rule({r["rule"]: r["tracking_rmse_bps"] for r in summary}),
-            "daily": daily}
+            "gates": gates, "selection": selection, "daily": daily}
 
 
 def select_preferred_rule(rmse_by_rule, tie_tolerance_bps=Decimal("0.1")):

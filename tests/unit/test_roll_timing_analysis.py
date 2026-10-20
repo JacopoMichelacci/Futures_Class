@@ -79,6 +79,15 @@ class ComparisonTests(unittest.TestCase):
         result = compare_timing_rules(self.e, min_common_dates=500)
         self.assertFalse(result["gates"]["passed"])
 
+    def test_failed_gate_selects_no_preferred_rule(self):
+        for kwargs in ({"min_common_dates": 500}, {"min_survival": Decimal("1.01")}):
+            result = compare_timing_rules(self.e, **kwargs)
+            self.assertIsNone(result["selection"]["preferred_rule"])
+            self.assertFalse(result["selection"]["resolved"])
+            self.assertEqual(result["selection"]["blocked_reason"], "coverage_gate_failed")
+            self.assertEqual(len(result["summary"]), 4)  # RMSE is still reported.
+        self.assertEqual(self.r["selection"]["preferred_rule"], "fixed_-10")  # Passing gate selects.
+
 
 class SelectionTests(unittest.TestCase):
     def test_clear_winner(self):

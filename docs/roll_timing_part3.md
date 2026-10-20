@@ -33,6 +33,8 @@ Accounting and the metric are the shared `portfolio_pnl` and `tracking_rmse_bps`
 
 The lowest daily-bp RMSE wins. Differences **strictly below** 0.1 bp are ties, and ties go to the simplest rule in this order: baseline `fixed_-5`, then `fixed_-10`, then the two crossover rules. **A tie only between volume and OI crossover has no agreed order**, so it is reported as `resolved=False` rather than picked. The team needs to decide that if it ever occurs. There is no second metric.
 
+**No selection when a coverage gate fails.** If the ≥100 common-date or ≥70% survival gate fails, RMSE is still reported, but `preferred_rule` is `None` with `blocked_reason="coverage_gate_failed"`. Per the spec, the next step is the team-approved, coverage-only alternative period; persistent failure stops the empirical comparison.
+
 ## Running
 
 ```bash
