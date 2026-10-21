@@ -1,0 +1,5 @@
+rule,fixed_aum,tracking_rmse_bps_daily,common_valid_dates,candidate_dates,survival,selection_reference,positions_different_from_nearest,positions,exact_half_targets,capacity_binding_positions,selected,within_tie_tolerance,delta_from_minimum_bps
+nearest,1000000,8.021905648440139703153527795,148,148,1,True,0,444,0,0,False,False,0.357668941663157557960664640
+toward_zero,1000000,7.664236706776982145192863155,148,148,1,True,236,444,0,0,True,True,0E-27
+away_from_zero,1000000,12.46280102092578391290287784,148,148,1,True,208,444,0,0,False,False,4.798564314148801767710014685
+residual_greedy,1000000,8.021905648440139703153527795,148,148,1,True,0,444,0,0,False,False,0.357668941663157557960664640

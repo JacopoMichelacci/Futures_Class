@@ -1,4 +1,4 @@
-"""Offline Part 2 rounding demonstration; no historical analysis or selection."""
+"""Independent real-data rounding analysis or explicitly synthetic Part 2 demo."""
 import argparse
 import json
 from pathlib import Path
@@ -19,9 +19,31 @@ from src.validation.schemas import load_project_config
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fixtures", action="store_true")
-    if not parser.parse_args().fixtures:
-        parser.error("Historical analysis is deferred; use --fixtures for the offline Part 2 demo")
+    parser.add_argument("--real", action="store_true", help="Analyse only the frozen Section 0 handoff")
+    parser.add_argument("--handoff-dir", type=Path, default=ROOT / "data/section0")
+    parser.add_argument("--out", type=Path, default=ROOT / "outputs/person4")
+    parser.add_argument("--chart-html", type=Path, help="Write a self-contained offline Plotly export page")
+    parser.add_argument("--chart-png", type=Path, help="Register a PNG exported from the current figure")
+    args = parser.parse_args()
+    if args.fixtures == args.real:
+        parser.error("Choose exactly one of --fixtures or --real")
     config = load_project_config(ROOT / "config/project.yaml")
+    if args.real:
+        from src.rounding.analysis import load_rounding_experiment, analyse_rounding
+        from src.rounding.exports import write_outputs, write_chart_html, register_chart_export
+        from src.section0.phase_b import plain
+        result = analyse_rounding(load_rounding_experiment(args.handoff_dir, config))
+        manifest = write_outputs(result, args.out)
+        if args.chart_html:
+            args.chart_html.parent.mkdir(parents=True, exist_ok=True)
+            write_chart_html(result, args.chart_html)
+        if args.chart_png:
+            register_chart_export(args.out, args.chart_png.read_bytes())
+            manifest = write_outputs(result, args.out)
+        if not manifest["chart_export_verified"]:
+            print("PNG export pending: use --chart-html and the offline camera button, then --chart-png.", file=sys.stderr)
+        print(json.dumps(plain({"mode": result["data_kind"], "by_aum": result["by_aum"], "selection": result["selection"]}), indent=2))
+        return
     f = load_fixture(ROOT / "data/fixtures/phase_a.json", config["max_liquidity_source_age_sessions"])
     # All supplied targets are the near maturity, by explicit fixture identity.
     targets = [RoundingTarget(**row, maturity_rank=1) for row in f.raw["post_capacity_targets"]]
