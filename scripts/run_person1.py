@@ -1,7 +1,7 @@
-"""Issue #14: real Section 0 contract-destination experiment.
+"""Real-data contract-destination experiment (Issue #14, PR #28).
 
-Run from a checkout containing both src.selection and src.section0.phase_b.
-Never substitutes synthetic prices, positions, or performance data.
+Requires a checkout containing both this branch and Section 0 Phase B code,
+plus the frozen data/section0 handoff. No synthetic production substitutes.
 """
 from __future__ import annotations
 
@@ -10,115 +10,102 @@ import json
 from decimal import Decimal
 from pathlib import Path
 
-from src.selection.analysis import DestinationInputs, StrategyResult, RULES, run_experiment
+from src.selection.analysis import DestinationInputs, StrategyResult, run_experiment
 from src.selection.exports import export_results
-from src.section0.phase_b import load_inputs, read_table, holdings_from_contract_path
 from src.portfolio.baseline import BaselinePath
 from src.portfolio.holdings import Holding, HoldingsBook
 from src.metrics.portfolio_pnl import portfolio_pnl
 from src.validation.schemas import ContractError, load_project_config
 
 
-def _reference_aum(handoff: Path) -> Decimal:
-    """Read the locked selection reference, rejecting an unexpected handoff."""
-    freeze = json.loads((handoff / "freeze.json").read_text())
-    # The handoff's destination mask and baseline rows are authoritative for AUM.
-    mask = read_table(handoff / "common_masks.parquet")
-    amounts = {Decimal(str(r["fixed_aum"])) for r in mask if r["strand"] == "destination"}
-    if amounts != {Decimal("10000000")}:
-        raise ContractError(f"Unexpected destination AUM(s): {sorted(amounts)}")
-    if not isinstance(freeze, dict):
-        raise ContractError("Invalid frozen manifest")
-    return Decimal("10000000")
-
-
-def _benchmark_rows(handoff: Path, aum: Decimal, dates: tuple[str, ...]):
-    selected = [r for r in read_table(handoff / "benchmark_holdings.parquet")
-                if Decimal(str(r["fixed_aum"])) == aum]
-    if not selected:
-        raise ContractError("No benchmark holdings at destination reference AUM")
-    if {r["date"] for r in selected} != set(dates):
-        raise ContractError("Benchmark holdings dates differ from frozen candidate dates")
-    return [Holding(
-        date=r["date"], strategy="benchmark", commodity=r["commodity"],
-        contract=r["contract"], decision_cutoff=r["decision_cutoff"],
-        formed_at=r["decision_cutoff"], inputs_as_of=r["inputs_as_of"],
-        benchmark_fractional_contracts=Decimal(str(r["fractional_contracts"])),
-    ) for r in selected]
-
-
 def run_real(handoff: Path, outdir: Path, config_path: Path):
+    # Import here so the selection branch's unit tests remain runnable before
+    # the separate Section 0 Phase B PR is merged.
+    try:
+        from src.section0.phase_b import load_inputs, read_table, holdings_from_contract_path
+    except ImportError as exc:
+        raise RuntimeError("Section 0 Phase B is required; use a combined checkout or merge PR #29 first") from exc
+
     config = load_project_config(str(config_path))
-    aum = _reference_aum(handoff)
-    shared = load_inputs(handoff / "inputs", config)  # verifies frozen input hashes
-    calendar = shared.calendar
-    catalogue = shared.catalogue.contracts
-    observations = shared.observations
+    if not (handoff / "freeze.json").is_file():
+        raise ContractError(f"Missing frozen Section 0 handoff: {handoff}")
+    freeze = json.loads((handoff / "freeze.json").read_text())
+    if not isinstance(freeze, dict):
+        raise ContractError("Invalid freeze manifest")
+    aum = Decimal("10000000")
+    masks = [r for r in read_table(handoff / "common_masks.parquet")
+             if r["strand"] == "destination"]
+    if not masks or {Decimal(str(r["fixed_aum"])) for r in masks} != {aum}:
+        raise ContractError("Frozen destination reference AUM must be exactly $10m")
+
+    shared = load_inputs(handoff / "inputs", config)
+    calendar, catalogue, observations = shared.calendar, shared.catalogue.contracts, shared.observations
     dates = tuple(shared.dates)
+    if len(dates) != len(set(dates)) or tuple(sorted(dates)) != dates:
+        raise ContractError("Frozen dates must be sorted and unique")
+    mask = {r["date"]: r["common_valid_date"] is True for r in masks}
+    if len(mask) != len(masks) or set(mask) != set(dates):
+        raise ContractError("Frozen destination mask does not match the candidate dates")
+    # Fail closed until the frozen common mask is reconciled; no fake flat positions.
+    if not all(mask.values()):
+        raise ContractError("Frozen destination mask has invalid dates; reconcile before export")
+
     curve = read_table(handoff / "eligible_curve.parquet")
     baseline = BaselinePath(
         tuple(read_table(handoff / "baseline_contract_path.parquet")),
         tuple(read_table(handoff / "roll_events.parquet")),
     )
     decision_inputs = read_table(handoff / "decision_inputs.parquet")
-    benchmark_holdings = _benchmark_rows(handoff, aum, dates)
+    frozen_daily = [r for r in read_table(handoff / "baseline_daily.parquet")
+                    if Decimal(str(r["fixed_aum"])) == aum]
+    benchmark_exact = {
+        r["date"]: Decimal(str(r["benchmark_daily_return"]))
+        if r["common_valid_date"] and r["benchmark_daily_return"] is not None else None
+        for r in frozen_daily
+    }
+    if len(benchmark_exact) != len(frozen_daily) or set(benchmark_exact) != set(dates):
+        raise ContractError("Frozen benchmark dates are missing or duplicated")
+    benchmark = {d: float(v) if v is not None else None for d, v in benchmark_exact.items()}
 
-    # Frozen benchmark returns and destination-specific validity are not inferred
-    # from strategy outcomes. We never search for a more favorable date mask.
-    benchmark_rows = [r for r in read_table(handoff / "baseline_daily.parquet")
-                      if Decimal(str(r["fixed_aum"])) == aum]
-    benchmark = {r["date"]: float(Decimal(str(r["benchmark_daily_return"])))
-                 if r["common_valid_date"] and r["benchmark_daily_return"] is not None else None
-                 for r in benchmark_rows}
-    mask_rows = [r for r in read_table(handoff / "common_masks.parquet")
-                 if r["strand"] == "destination" and Decimal(str(r["fixed_aum"])) == aum]
-    mask = {r["date"]: r["common_valid_date"] is True for r in mask_rows}
-    if set(benchmark) != set(dates) or set(mask) != set(dates):
-        raise ContractError("Frozen benchmark/mask dates do not match frozen inputs")
-    if not all(mask.values()):
-        raise ContractError("Frozen destination mask contains invalid dates; reconcile upstream")
+    raw_benchmark = [r for r in read_table(handoff / "benchmark_holdings.parquet")
+                     if Decimal(str(r["fixed_aum"])) == aum]
+    if not raw_benchmark or {r["date"] for r in raw_benchmark} != set(dates):
+        raise ContractError("Benchmark holdings missing frozen dates at $10m")
+    benchmark_holdings = [Holding(
+        date=r["date"], strategy="benchmark", commodity=r["commodity"],
+        contract=r["contract"], decision_cutoff=r["decision_cutoff"],
+        formed_at=r["decision_cutoff"], inputs_as_of=r["inputs_as_of"],
+        benchmark_fractional_contracts=Decimal(str(r["fractional_contracts"])),
+    ) for r in raw_benchmark]
 
-    # Each candidate path is valued with the SAME Section 0 exact-contract P&L.
-    # Incomplete paths raise, rather than becoming zero returns or shortened samples.
     def evaluate_path(rule, path, reference_aum):
         if Decimal(str(reference_aum)) != aum:
-            raise ContractError("Reference AUM differs from frozen destination AUM")
-        incomplete = [r for r in path.positions if r.get("implemented") is not True or not r.get("contract")]
+            raise ContractError("Changed fixed reference AUM")
+        incomplete = [p for p in path.positions if p.get("implemented") is not True or not p.get("contract")]
         if incomplete:
-            sample = [(r["date"], r["commodity"], r.get("flags")) for r in incomplete[:8]]
-            raise ContractError(f"{rule}: {len(incomplete)} unimplemented path rows; examples: {sample}")
+            sample = [(p["date"], p["commodity"], p.get("flags")) for p in incomplete[:5]]
+            raise ContractError(f"{rule}: {len(incomplete)} unimplemented positions; examples: {sample}")
         sized, _ = holdings_from_contract_path(
             path.positions, decision_inputs, catalogue, calendar, config, aum, strategy=rule
         )
         book = HoldingsBook([*benchmark_holdings, *sized], calendar, catalogue)
-        validity = {(day, strategy): mask[day]
-                    for day in dates for strategy in ("benchmark", rule)}
-        daily = portfolio_pnl(
-            book, observations, dates, ("benchmark", rule), aum,
-            shared.provenance["snapshot_end_exclusive"], validity,
-        )
+        validity = {(d, s): mask[d] for d in dates for s in ("benchmark", rule)}
+        daily = portfolio_pnl(book, observations, dates, ("benchmark", rule), aum,
+                              shared.provenance["snapshot_end_exclusive"], validity)
         failures = [(r.date, r.invalid_reasons) for r in daily if not r.common_valid]
         if failures:
-            raise ContractError(f"{rule}: shared accounting invalid on {len(failures)} dates: {failures[:5]}")
-        # Verify benchmark matches the frozen Section 0 baseline computation.
-        for row in daily:
-            frozen = benchmark[row.date]
-            if frozen is None or abs(row.returns["benchmark"] - Decimal(str(frozen))) > Decimal("1e-12"):
-                raise ContractError(f"{rule}: benchmark differs from frozen return on {row.date}")
-        maturities = tuple(float(r.details["days_to_anchor"]) for r in sized)
+            raise ContractError(f"{rule}: accounting invalid on {len(failures)} dates: {failures[:5]}")
+        for r in daily:
+            expected = benchmark_exact[r.date]
+            if expected is None or abs(r.returns["benchmark"] - expected) > Decimal("1e-12"):
+                raise ContractError(f"{rule}: benchmark does not reproduce frozen return on {r.date}")
         return StrategyResult(
             daily_returns={r.date: float(r.returns[rule]) for r in daily},
-            maturity_sessions=maturities,
+            maturity_sessions=tuple(float(h.details["days_to_anchor"]) for h in sized),
             roll_dates=tuple(e["date"] for e in path.roll_events),
         )
 
-    inputs = DestinationInputs(
-        baseline_path=baseline, eligible_curve=curve, calendar=calendar,
-        catalogue=catalogue, benchmark_daily_returns=benchmark,
-        candidate_dates=dates, reference_aum_usd=float(aum),
-    )
-    # No invented tie priority. If a <0.1 bp tie occurs, report it unresolved
-    # until the exact frozen Part V order is supplied.
+    inputs = DestinationInputs(baseline, curve, calendar, catalogue, benchmark, dates, float(aum))
     result = run_experiment(
         inputs, evaluate_path,
         min_dates=config["tracking_min_common_dates"],
@@ -126,26 +113,24 @@ def run_real(handoff: Path, outdir: Path, config_path: Path):
         tie_bps=float(config["tracking_rmse_tie_tolerance_bps_daily"]),
     )
     if not result["coverage_passed"]:
-        raise ContractError("Destination coverage gate failed; no canonical empirical export")
+        raise ContractError("Coverage gate failed; no empirical export")
     export_results(result, outdir, provenance="real")
-    print(f"Saved empirical outputs to: {outdir.resolve()}")
-    for row in result["summary"]:
-        print(f"  {row['rule']:<18} RMSE={row['tracking_rmse_bps']:.5f} bp "
-              f"common_dates={row['common_valid_dates']}")
-    print(f"Preferred rule: {result['preferred_rule'] or 'unresolved (confirm Part V tie priority)'}")
+    print(f"Empirical results saved to {outdir.resolve()}")
+    for r in result["summary"]:
+        print(f"{r['rule']}: {r['tracking_rmse_bps']:.6f} bp; n={r['common_valid_dates']}")
+    print("Preferred:", result["preferred_rule"] or "unresolved (tie priority not frozen)")
     return result
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--real", action="store_true", help="Run frozen empirical comparison")
-    parser.add_argument("--fixtures", action="store_true", help="Not supported by this real-data runner")
+    parser.add_argument("--real", action="store_true")
     parser.add_argument("--handoff", type=Path, default=Path("data/section0"))
     parser.add_argument("--output-dir", type=Path, default=Path("outputs/person1"))
     parser.add_argument("--config", type=Path, default=Path("config/project.yaml"))
     args = parser.parse_args()
-    if not args.real or args.fixtures:
-        parser.error("Specify --real (fixture tests remain in tests/unit)")
+    if not args.real:
+        parser.error("Specify --real; synthetic tests are in tests/unit")
     run_real(args.handoff, args.output_dir, args.config)
 
 
