@@ -1,0 +1,28 @@
+{
+  "accepted_reference_hashes": {
+    "cme_scheduled_sessions.json": "05eab14e2c99ef59f981a8c4339b720b8829897e5cf6e32e254e8ff0c64e9cd0",
+    "contract_inventory.json": "26316483a378218b6310e1bf2f00842d44c0c64109d2feab89813bfc8b1c18bf",
+    "fnd_source_register.json": "fcb9890649abea391b411e9a1dbec3cf083644daea7cbce372cb9c0c95696882"
+  },
+  "calendar_source": "https://www.cmegroup.com/trading-hours.html",
+  "dataset": "GLBX.MDP3",
+  "first_return": "2026-03-02",
+  "fnd_policy": "Direct CME or accepted official-source-derived FND; never expiration",
+  "initialisation": "2026-02-27",
+  "last_return": "2026-09-30",
+  "normal_settlement_source": "https://www.cmegroup.com/trading/agricultural/files/daily-grains-settlement-procedure.pdf",
+  "production_hashes": {
+    "catalogue.json": "74cc6a0f828af5549e0c0b604d759fa9264c65a62a2ad0ded2dcff025a825a0d",
+    "definition.jsonl": "15a4ad312ec748187492ac2a21e2e83b790367491ac7e16834a03bf4139d388b",
+    "evaluation_session_calendar.json": "ef2fccb098a9fea43c26026c2fe5cd133f31966758c9392e324294c62cf18414",
+    "observation_history.json": "81433aec9850619a81ad94043049f819e70b5c01e0e742f79c72183d5b8a6552",
+    "statistics.jsonl": "f9527275e04c6da43fa98b9c730d3c3e65e613bac6af4b7cbe2918a7d8e3e76d"
+  },
+  "project_spec_version": "8.0",
+  "projection": "Only exact consumed event versions; full raw revision stream remains local",
+  "publication_basis": "ts_recv",
+  "snapshot_end_exclusive": "2026-10-02T00:00:00Z",
+  "source_date_basis": "ts_ref",
+  "start": "2026-01-26",
+  "timing_search_policy": "Issue #23: first-held through strictly before baseline -5; fallback -5"
+}

@@ -1,4 +1,4 @@
-"""Explicit fixture-only Phase A demonstration. Never downloads market data."""
+"""Offline Section 0 fixture demonstration or frozen Phase B construction."""
 import argparse
 import json
 from pathlib import Path
@@ -17,10 +17,28 @@ from src.validation.schemas import load_project_config
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--fixtures", action="store_true", help="Run only the committed synthetic example")
+    parser.add_argument("--production-dir", type=Path, help="Accepted local production directory; never downloads")
+    parser.add_argument("--inventory-dir", type=Path, help="Frozen accepted inventory evidence for initial construction")
+    parser.add_argument("--reproduce", action="store_true", help="Rebuild Phase B from committed consumed inputs")
+    parser.add_argument("--handoff-dir", type=Path, default=ROOT / "data/section0")
+    parser.add_argument("--output-dir", type=Path, help="New empty output directory")
     args = parser.parse_args()
-    if not args.fixtures:
-        parser.error("Real-data Section 0 is Phase B; supply --fixtures for the offline Phase A demonstration")
+    if sum((args.fixtures, bool(args.production_dir), args.reproduce)) != 1:
+        parser.error("Choose exactly one of --fixtures, --production-dir or --reproduce")
     config = load_project_config(ROOT / "config/project.yaml")
+    if not args.fixtures:
+        from src.section0.phase_b import export, load_inputs, load_production
+        if args.output_dir is None:
+            parser.error("Phase B requires a new --output-dir")
+        if args.production_dir and args.inventory_dir is None:
+            parser.error("Initial production construction requires --inventory-dir")
+        inputs = (load_production(args.production_dir, args.inventory_dir, config) if args.production_dir
+                  else load_inputs(args.handoff_dir / "inputs", config))
+        result = export(inputs, config, args.output_dir, freeze_inputs=bool(args.production_dir))
+        print(json.dumps({"mode": "phase_b", "coverage": result["coverage"],
+                          "references": result["preflight"]["references"],
+                          "method_comparisons_run": False}, default=str, indent=2))
+        return
     f = load_fixture(ROOT / "data/fixtures/phase_a.json", config["max_liquidity_source_age_sessions"])
     case = f.raw["baseline_path_case"]
     baseline = build_baseline_path(case["eligible_curve"], case["decision_dates"], case["commodities"],

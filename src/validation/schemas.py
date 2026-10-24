@@ -1,4 +1,4 @@
-"""Shared value types and one schema-name registry for Phase A and deferred exports."""
+"""Shared value types and one schema-name registry for Phase A and Phase B."""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -72,10 +72,23 @@ OBSERVATION_COLUMNS = (
     "selected_as_of", "lag_from_decision_sessions", "lag_from_interval_end_sessions", "adv20_window_index",
 )
 
+# Context-free source events, distinct from Observation.view() decision views.
+# These reuse the shared Observation fields; a wide daily snapshot is neither.
+OBSERVATION_EVENT_COLUMNS = (
+    "dataset", "publisher_id", "instrument_id", "contract", "root", "observation_id",
+    "trading_date", "publication_timestamp", "venue_event_timestamp", "statistic_type",
+    "statistic_value", "value_unit", "stat_flags", "update_action", "sequence",
+    "channel_id", "session_index", "invalid_reason",
+)
+POST_CAPACITY_TARGET_COLUMNS = (
+    "commodity", "contract", "maturity_rank", "post_capacity_fractional_contracts",
+    "dollar_contract_notional", "capacity_limit_contracts", "target_weight", "target_notional",
+)
+
 # Version 8 Appendix B names are reserved here even where Phase A does not
 # materialise a table. Declarations do not imply production validation or data.
 # HOLDINGS_COLUMNS remains the unified engine representation from Section 36;
-# the dedicated benchmark export is a distinct, explicitly deferred view.
+# the dedicated benchmark export is a distinct view of the Phase B holdings.
 TABLE_COLUMNS = {
     "statistic_observations": OBSERVATION_COLUMNS,
     "contracts": (
@@ -83,7 +96,7 @@ TABLE_COLUMNS = {
         "expiration", "first_notice", "anchor", "min_price_increment", "min_price_increment_amount",
         "display_factor", "main_fraction", "sub_fraction", "unit_of_measure", "unit_of_measure_qty",
         "derived_price_scale", "tick_value", "source_note", "first_notice_source_url", "first_notice_retrieved_at",
-        "dataset", "publisher_id", "instrument_id", "dollars_per_price_unit", "anchor_source",
+        "dataset", "publisher_id", "instrument_id", "dollars_per_price_unit", "anchor_source", "value_unit",
     ),
     "daily_contract_data": (
         "trading_date", "commodity", "contract", "eligible", "settlement", "settlement_quality",
@@ -111,6 +124,9 @@ TABLE_SCHEMA_STATUS.update({
     "strategy_holdings": "phase_a_holdings_interface",
     "strategy_daily": "phase_a_returns_with_deferred_diagnostics",
 })
+TABLE_SCHEMA_STATUS.update({name: "phase_b_frozen_export" for name in (
+    "contracts", "eligible_curve", "roll_events", "benchmark_holdings", "baseline_holdings", "contract_returns",
+)})
 DEFERRED_STRATEGY_DAILY_FIELDS = ("implemented_notional_share", "quality_flags")
 
 

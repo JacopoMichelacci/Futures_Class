@@ -1,0 +1,570 @@
+{
+  "dates": [
+    "2026-03-02",
+    "2026-03-03",
+    "2026-03-04",
+    "2026-03-05",
+    "2026-03-06",
+    "2026-03-09",
+    "2026-03-10",
+    "2026-03-11",
+    "2026-03-12",
+    "2026-03-13",
+    "2026-03-16",
+    "2026-03-17",
+    "2026-03-18",
+    "2026-03-19",
+    "2026-03-20",
+    "2026-03-23",
+    "2026-03-24",
+    "2026-03-25",
+    "2026-03-26",
+    "2026-03-27",
+    "2026-03-30",
+    "2026-03-31",
+    "2026-04-01",
+    "2026-04-02",
+    "2026-04-06",
+    "2026-04-07",
+    "2026-04-08",
+    "2026-04-09",
+    "2026-04-10",
+    "2026-04-13",
+    "2026-04-14",
+    "2026-04-15",
+    "2026-04-16",
+    "2026-04-17",
+    "2026-04-20",
+    "2026-04-21",
+    "2026-04-22",
+    "2026-04-23",
+    "2026-04-24",
+    "2026-04-27",
+    "2026-04-28",
+    "2026-04-29",
+    "2026-04-30",
+    "2026-05-01",
+    "2026-05-04",
+    "2026-05-05",
+    "2026-05-06",
+    "2026-05-07",
+    "2026-05-08",
+    "2026-05-11",
+    "2026-05-12",
+    "2026-05-13",
+    "2026-05-14",
+    "2026-05-15",
+    "2026-05-18",
+    "2026-05-19",
+    "2026-05-20",
+    "2026-05-21",
+    "2026-05-22",
+    "2026-05-26",
+    "2026-05-27",
+    "2026-05-28",
+    "2026-05-29",
+    "2026-06-01",
+    "2026-06-02",
+    "2026-06-03",
+    "2026-06-04",
+    "2026-06-05",
+    "2026-06-08",
+    "2026-06-09",
+    "2026-06-10",
+    "2026-06-11",
+    "2026-06-12",
+    "2026-06-15",
+    "2026-06-16",
+    "2026-06-17",
+    "2026-06-18",
+    "2026-06-22",
+    "2026-06-23",
+    "2026-06-24",
+    "2026-06-25",
+    "2026-06-26",
+    "2026-06-29",
+    "2026-06-30",
+    "2026-07-01",
+    "2026-07-02",
+    "2026-07-06",
+    "2026-07-07",
+    "2026-07-08",
+    "2026-07-09",
+    "2026-07-10",
+    "2026-07-13",
+    "2026-07-14",
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-07-27",
+    "2026-07-28",
+    "2026-07-29",
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-03",
+    "2026-08-04",
+    "2026-08-05",
+    "2026-08-06",
+    "2026-08-07",
+    "2026-08-10",
+    "2026-08-11",
+    "2026-08-12",
+    "2026-08-13",
+    "2026-08-14",
+    "2026-08-17",
+    "2026-08-18",
+    "2026-08-19",
+    "2026-08-20",
+    "2026-08-21",
+    "2026-08-24",
+    "2026-08-25",
+    "2026-08-26",
+    "2026-08-27",
+    "2026-08-28",
+    "2026-08-31",
+    "2026-09-01",
+    "2026-09-02",
+    "2026-09-03",
+    "2026-09-04",
+    "2026-09-08",
+    "2026-09-09",
+    "2026-09-10",
+    "2026-09-11",
+    "2026-09-14",
+    "2026-09-15",
+    "2026-09-16",
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30"
+  ],
+  "destination_scope": [
+    {
+      "commodity": "ZC",
+      "contract": "ZCH7",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCH7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCN6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCN6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCN7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCU6",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCU6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCU6",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCU6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCZ6",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCZ6",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZC",
+      "contract": "ZCZ6",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSF7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSF7",
+      "first": "2026-07-24",
+      "last": "2026-08-21",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSH7",
+      "first": "2026-07-24",
+      "last": "2026-08-21",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSH7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSN6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSN6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSN7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSQ6",
+      "first": "2026-06-23",
+      "last": "2026-07-23",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSQ6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSQ6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSU6",
+      "first": "2026-07-24",
+      "last": "2026-08-21",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSU6",
+      "first": "2026-06-23",
+      "last": "2026-07-23",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSX6",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSX6",
+      "first": "2026-06-23",
+      "last": "2026-07-23",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSX6",
+      "first": "2026-07-24",
+      "last": "2026-08-21",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZS",
+      "contract": "ZSX6",
+      "first": "2026-06-23",
+      "last": "2026-07-23",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWH7",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWH7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWK6",
+      "first": "2026-02-27",
+      "last": "2026-04-22",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWN6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWN6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWN7",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWU6",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWU6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_second_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWU6",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWU6",
+      "first": "2026-04-23",
+      "last": "2026-06-22",
+      "witness": "destination_target_75"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWZ6",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_next_deferred"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWZ6",
+      "first": "2026-08-24",
+      "last": "2026-09-29",
+      "witness": "destination_target_45"
+    },
+    {
+      "commodity": "ZW",
+      "contract": "ZWZ6",
+      "first": "2026-06-23",
+      "last": "2026-08-21",
+      "witness": "destination_target_75"
+    }
+  ],
+  "provenance": {
+    "accepted_reference_hashes": {
+      "cme_scheduled_sessions.json": "05eab14e2c99ef59f981a8c4339b720b8829897e5cf6e32e254e8ff0c64e9cd0",
+      "contract_inventory.json": "26316483a378218b6310e1bf2f00842d44c0c64109d2feab89813bfc8b1c18bf",
+      "fnd_source_register.json": "fcb9890649abea391b411e9a1dbec3cf083644daea7cbce372cb9c0c95696882"
+    },
+    "calendar_source": "https://www.cmegroup.com/trading-hours.html",
+    "dataset": "GLBX.MDP3",
+    "first_return": "2026-03-02",
+    "fnd_policy": "Direct CME or accepted official-source-derived FND; never expiration",
+    "initialisation": "2026-02-27",
+    "last_return": "2026-09-30",
+    "normal_settlement_source": "https://www.cmegroup.com/trading/agricultural/files/daily-grains-settlement-procedure.pdf",
+    "production_hashes": {
+      "catalogue.json": "74cc6a0f828af5549e0c0b604d759fa9264c65a62a2ad0ded2dcff025a825a0d",
+      "definition.jsonl": "15a4ad312ec748187492ac2a21e2e83b790367491ac7e16834a03bf4139d388b",
+      "evaluation_session_calendar.json": "ef2fccb098a9fea43c26026c2fe5cd133f31966758c9392e324294c62cf18414",
+      "observation_history.json": "81433aec9850619a81ad94043049f819e70b5c01e0e742f79c72183d5b8a6552",
+      "statistics.jsonl": "f9527275e04c6da43fa98b9c730d3c3e65e613bac6af4b7cbe2918a7d8e3e76d"
+    },
+    "project_spec_version": "8.0",
+    "projection": "Only exact consumed event versions; full raw revision stream remains local",
+    "publication_basis": "ts_recv",
+    "snapshot_end_exclusive": "2026-10-02T00:00:00Z",
+    "source_date_basis": "ts_ref",
+    "start": "2026-01-26",
+    "timing_search_policy": "Issue #23: first-held through strictly before baseline -5; fallback -5"
+  },
+  "statistics_contracts": [
+    "ZCH7",
+    "ZCK6",
+    "ZCK7",
+    "ZCN6",
+    "ZCN7",
+    "ZCU6",
+    "ZCZ6",
+    "ZSF7",
+    "ZSH7",
+    "ZSK6",
+    "ZSN6",
+    "ZSN7",
+    "ZSQ6",
+    "ZSU6",
+    "ZSX6",
+    "ZWH7",
+    "ZWK6",
+    "ZWK7",
+    "ZWN6",
+    "ZWN7",
+    "ZWU6",
+    "ZWZ6"
+  ]
+}

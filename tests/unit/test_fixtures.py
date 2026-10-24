@@ -33,7 +33,7 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(f.raw["fixture_format"], "section0_phase_a_cases_v1")
         self.assertNotIn("daily_contract_data", f.raw)
 
-    def test_phase_b_metadata_and_benchmark_names_are_reserved_not_fabricated(self):
+    def test_phase_b_metadata_and_benchmark_names_preserve_canonical_fields(self):
         required_metadata = {"commodity", "root", "contract", "maturity_month", "maturity_year", "first_notice",
                              "min_price_increment", "min_price_increment_amount", "display_factor", "main_fraction",
                              "sub_fraction", "unit_of_measure", "unit_of_measure_qty", "derived_price_scale", "tick_value",
@@ -42,8 +42,9 @@ class FixtureTests(unittest.TestCase):
         self.assertEqual(TABLE_COLUMNS["benchmark_holdings"], ("date", "commodity", "contract", "target_weight", "interpolation_weight", "target_notional", "fractional_contracts"))
         self.assertIn("benchmark_fractional_contracts", HOLDINGS_COLUMNS)
         self.assertNotIn("fractional_contracts", HOLDINGS_COLUMNS)
-        for name in ("contracts", "daily_contract_data", "benchmark_holdings", "contract_returns"):
-            self.assertEqual(TABLE_SCHEMA_STATUS[name], "phase_b_deferred_declaration")
+        for name in ("contracts", "benchmark_holdings", "contract_returns"):
+            self.assertEqual(TABLE_SCHEMA_STATUS[name], "phase_b_frozen_export")
+        self.assertEqual(TABLE_SCHEMA_STATUS["daily_contract_data"], "phase_b_deferred_declaration")
         self.assertEqual(set(TABLE_COLUMNS), set(TABLE_SCHEMA_STATUS))
 
     def test_legacy_contract_return_name_is_not_redefined_as_price_change(self):
@@ -108,10 +109,10 @@ class FixtureTests(unittest.TestCase):
             self.assertTrue(result["common_valid"])
         self.assertEqual(len(f.raw["post_capacity_targets"]), 3)
 
-    def test_demo_requires_explicit_fixture_mode(self):
+    def test_demo_requires_explicit_mode(self):
         result = subprocess.run([sys.executable, "-B", str(ROOT / "scripts/run_section0.py")], cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(result.returncode, 2)
-        self.assertIn("Real-data Section 0 is Phase B", result.stderr)
+        self.assertIn("Choose exactly one of --fixtures, --production-dir or --reproduce", result.stderr)
 
     def test_clean_copy_demo_needs_no_pilot_or_installed_project_package(self):
         with tempfile.TemporaryDirectory() as directory:

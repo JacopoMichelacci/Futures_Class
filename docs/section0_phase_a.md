@@ -1,3 +1,5 @@
+> Phase B update: this contribution now supplies the frozen empirical handoff. See [section0_phase_b.md](section0_phase_b.md). Deferred production statements below describe the historical Phase A delivery; the fixture interfaces remain supported.
+
 # Section 0 Phase A interfaces and review boundary
 
 Historical implementation branch: `issue-5-section0-phase-a`, originally based on upstream main `0a51609ba5a621fd2e3b49ba919fd513b73bdc2f`. **Current status:** [PR #18](https://github.com/JacopoMichelacci/Futures_Class/pull/18) merged into team main on 11 October 2026 at `47ad4d32f09e4bd682fc2ee2cec6a0c27a8dd198`.
