@@ -1,0 +1,13 @@
+rule,commodity,outgoing_contract,incoming_contract,anchor,roll_decision_date,first_incoming_interval_end,sessions_before_anchor,fallback_flag,search_start,search_deadline,trigger_source_date,trigger_outgoing_value,trigger_incoming_value,experiment
+fixed_-5,ZC,ZC_SYN_NEAR,ZC_SYN_NEXT,2031-02-14,2031-02-07,2031-02-10,5,False,2031-01-03,2031-02-07,,,,synthetic_part3_harness
+fixed_-5,ZS,ZS_SYN_NEAR,ZS_SYN_NEXT,2031-03-10,2031-03-03,2031-03-04,5,False,2031-01-03,2031-03-03,,,,synthetic_part3_harness
+fixed_-5,ZW,ZW_SYN_NEAR,ZW_SYN_NEXT,2031-03-31,2031-03-24,2031-03-25,5,False,2031-01-03,2031-03-24,,,,synthetic_part3_harness
+fixed_-10,ZC,ZC_SYN_NEAR,ZC_SYN_NEXT,2031-02-14,2031-01-31,2031-02-03,10,False,2031-01-03,2031-02-07,,,,synthetic_part3_harness
+fixed_-10,ZS,ZS_SYN_NEAR,ZS_SYN_NEXT,2031-03-10,2031-02-24,2031-02-25,10,False,2031-01-03,2031-03-03,,,,synthetic_part3_harness
+fixed_-10,ZW,ZW_SYN_NEAR,ZW_SYN_NEXT,2031-03-31,2031-03-17,2031-03-18,10,False,2031-01-03,2031-03-24,,,,synthetic_part3_harness
+volume_crossover,ZC,ZC_SYN_NEAR,ZC_SYN_NEXT,2031-02-14,2031-02-04,2031-02-05,8,False,2031-01-03,2031-02-07,2031-02-03,5000,6000,synthetic_part3_harness
+volume_crossover,ZS,ZS_SYN_NEAR,ZS_SYN_NEXT,2031-03-10,2031-02-21,2031-02-24,11,False,2031-01-03,2031-03-03,2031-02-20,5000,6000,synthetic_part3_harness
+volume_crossover,ZW,ZW_SYN_NEAR,ZW_SYN_NEXT,2031-03-31,2031-03-24,2031-03-25,5,True,2031-01-03,2031-03-24,,,,synthetic_part3_harness
+oi_crossover,ZC,ZC_SYN_NEAR,ZC_SYN_NEXT,2031-02-14,2031-02-07,2031-02-10,5,True,2031-01-03,2031-02-07,,,,synthetic_part3_harness
+oi_crossover,ZS,ZS_SYN_NEAR,ZS_SYN_NEXT,2031-03-10,2031-02-28,2031-03-03,6,False,2031-01-03,2031-03-03,2031-02-27,20000,21000,synthetic_part3_harness
+oi_crossover,ZW,ZW_SYN_NEAR,ZW_SYN_NEXT,2031-03-31,2031-03-20,2031-03-21,7,False,2031-01-03,2031-03-24,2031-03-19,20000,21000,synthetic_part3_harness

@@ -1,0 +1,5 @@
+rule,tracking_rmse_bps_daily,delta_from_minimum_bps,common_valid_dates,candidate_dates,survival,roll_events,fallback_events,fallback_frequency,mean_sessions_before_anchor,within_tie_tolerance,selected,fixed_aum,data_kind
+fixed_-5,7.258070814444036181323300405,0.988637561228760127294742278,148,148,1,10,0,0,5,False,False,10000000,real_frozen_databento_section0
+fixed_-10,6.383167832017269910324452234,0.113734578801993856295894107,148,148,1,10,0,0,10,False,False,10000000,real_frozen_databento_section0
+volume_crossover,6.630367760822041373845311959,0.360934507606765319816753832,148,148,1,10,4,0.4,13,False,False,10000000,real_frozen_databento_section0
+oi_crossover,6.269433253215276054028558127,0E-27,148,148,1,10,2,0.2,16.5,True,True,10000000,real_frozen_databento_section0
