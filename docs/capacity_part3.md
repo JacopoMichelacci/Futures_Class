@@ -1,57 +1,46 @@
 # Capacity handling across AUM (Part 3)
 
-Addresses GitHub Issue #15. This analysis compares only the four capacity residual-allocation methods required by the Bible:
+Addresses GitHub Issue #15. This analysis compares the four locked residual-allocation rules while holding the frozen Section 0 primary contract path, timing, target weights, benchmark, accounting and nearest-half-up rounding fixed.
 
-1. `hard_truncate`
-2. `overflow_next`
-3. `overflow_sequential_two`
-4. `overflow_adv_weighted`
+## Real-data result
 
-## Status
+The analysis uses the merged Section 0 Phase B handoff: 148 common CME return dates from 2 March through 30 September 2026, with a fixed $1bn capacity-selection AUM. All 148 dates pass the frozen common mask.
 
-**The analysis harness is complete. Real empirical results are blocked until the frozen Section 0 Phase B handoff exists.** The repository currently contains only synthetic fixtures. It has no verified historical calendar, contract/FND metadata, real benchmark and baseline holdings, real eligible curves, or historical settlement and ADV20 inputs. The harness therefore refuses real-data mode rather than creating a fake result.
+| Capacity method | Tracking RMSE at $1bn (daily bp) |
+| --- | ---: |
+| Hard truncate | 87.981363 |
+| Next-deferred overflow | 66.999580 |
+| Sequential two-deferred overflow | 57.282698 |
+| ADV-weighted two-deferred overflow | 57.305883 |
 
-The synthetic run is a plumbing check only. It is not evidence for choosing a capacity method.
+`overflow_sequential_two` is selected. ADV-weighted overflow is 0.023185 bp worse, which is strictly below the locked 0.1 bp tie threshold. Sequential overflow is simpler, so it resolves the tie. No second metric was used.
 
-## Fixed inputs
+## Locked design
 
-`CapacityExperiment` accepts the frozen Section 0 objects rather than rebuilding them:
+- Core AUM grid: $1m, $10m, $100m and $1bn.
+- Capacity reference AUM: $1bn. Section 0 confirmed capacity binds there, so the $2.5bn fallback is inactive.
+- Capacity ceiling: `floor(2.5% × lagged ADV20 × one day)`.
+- ADV20: exactly 20 verified preceding sessions, publication-safe and excluding the decision session.
+- Ranking: exact-contract realised-return Tracking RMSE in daily basis points, with one fixed AUM denominator and the frozen common mask.
 
-| Input | Required production source |
-| --- | --- |
-| Calendar, exact contract catalogue and as-of observations | Section 0 Phase B |
-| Primary targets and eligible curves | Section 0 baseline path, with fixed contract choices |
-| Fractional benchmark holdings | Section 0 historical benchmark |
-| Rounding method | Frozen shared rounding choice |
-| AUM denominator | One fixed AUM for each comparison |
+At the lower grid AUMs, capacity does not bind, so every residual-allocation method has the same holdings and RMSE. The methods diverge at $1bn, where all 444 primary target rows bind.
 
-For each method, capacity produces fractional allocations, then the same rounding method is applied through the shared rounding engine. The shared P&L and Tracking RMSE functions use exact contract settlements and one common valid-date mask.
-
-## AUM and selection rules
-
-The output grid is the required `$1m`, `$10m`, `$100m`, and `$1bn`. The preflight first tests whether primary capacity binds at `$1bn`; only if it does not, it activates the configured `$2.5bn` fallback reference. Every result records the binding count and residual notional.
-
-Tracking RMSE is daily basis points with no annualisation. The lowest RMSE is preferred. Any difference **strictly below 0.1 bp** is a tie, resolved by the simpler method in this order: hard truncate, next-deferred overflow, sequential two-deferred overflow, ADV-weighted two-deferred overflow.
-
-The output keeps the 100 common-date and 70% candidate-survival gates visible. A gate failure is reported, never dropped from the comparison, and blocks a preferred-method selection. If the `$1bn` preflight is nonbinding, the `$2.5bn` fallback is checked once; if that is also nonbinding, the output records a capacity limitation rather than changing the 2.5% participation assumption.
-
-## Run the synthetic harness
+## Reproduce
 
 ```bash
-uv run --no-sync python -B -m unittest tests.unit.test_capacity_analysis -v
-uv run --no-sync python -B scripts/run_capacity_analysis.py --fixtures --out outputs/person3/synthetic_fixture
+uv sync --locked
+uv run --no-sync python -B scripts/run_person3.py --out outputs/person3
+uv run --no-sync python -B -m unittest discover -s tests/unit -v
 ```
 
-This writes:
+The runner reads only the committed processed Section 0 handoff. It makes no network request and does not need a Databento key.
 
-- `capacity_aum_summary.csv`: AUM, method, Tracking RMSE, shared-mask coverage, binding count, residual notional and selection fields.
-- `capacity_diagnostics.csv`: date-level primary capacity, residual allocation and flags for audit.
+Outputs:
 
-Without `--fixtures`, the command stops and states that it needs the frozen Section 0 handoff.
+- `outputs/person3/capacity_summary.csv`: four methods at the $1bn selection AUM.
+- `outputs/person3/capacity_by_aum.csv`: the full core AUM grid.
+- `outputs/person3/capacity_diagnostics.csv`: date-level caps, residual allocations and flags.
+- `outputs/person3/tracking_rmse_vs_aum.png`: main figure, including a $1bn comparison panel.
+- `outputs/person3/HANDOFF.md`: frozen inputs, selected rule and limitations for Section 5.
 
-## To produce the real Part 3 result
-
-1. Receive the verified Phase B calendar, exact contracts/FND anchors, observations, eligible curve, benchmark holdings and fixed primary targets from Section 0.
-2. Build a `CapacityExperiment` adapter from that handoff, with no alternative contract path or reoptimisation.
-3. Run the preflight, the AUM grid and the coverage gate; preserve the common mask.
-4. Commit the real summary, diagnostics and required figures, then record the selected method and limitations for Section 5.
+The retained `outputs/person3/synthetic_fixture/` files are a previous plumbing check. They are not empirical results.
