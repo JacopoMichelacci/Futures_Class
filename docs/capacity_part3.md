@@ -25,6 +25,8 @@ The analysis uses the merged Section 0 Phase B handoff: 148 common CME return da
 
 At the lower grid AUMs, capacity does not bind, so every residual-allocation method has the same holdings and RMSE. The methods diverge at $1bn, where all 444 primary target rows bind.
 
+`capacity_allocation_summary.csv` and `capacity_maturity_exposure.csv` explain the result without changing the selector: they report how much residual notional each method recovers, the deferred share of post-capacity exposure, and the frozen maturity ranks receiving that exposure. These diagnostics are descriptive only; RMSE remains the sole ranking metric.
+
 ## Reproduce
 
 ```bash
@@ -40,7 +42,10 @@ Outputs:
 - `outputs/person3/capacity_summary.csv`: four methods at the $1bn selection AUM.
 - `outputs/person3/capacity_by_aum.csv`: the full core AUM grid.
 - `outputs/person3/capacity_diagnostics.csv`: date-level caps, residual allocations and flags.
+- `outputs/person3/capacity_allocation_summary.csv`: residual recovery and aggregate deferred exposure.
+- `outputs/person3/capacity_maturity_exposure.csv`: exposure by frozen maturity rank.
 - `outputs/person3/tracking_rmse_vs_aum.png`: main figure, including a $1bn comparison panel.
+- `outputs/person3/deferred_exposure_vs_aum.png`: diagnostic figure, not a ranking metric.
 - `outputs/person3/HANDOFF.md`: frozen inputs, selected rule and limitations for Section 5.
 
 The retained `outputs/person3/synthetic_fixture/` files are a previous plumbing check. They are not empirical results.

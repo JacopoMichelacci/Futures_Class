@@ -4,6 +4,7 @@ from pathlib import Path
 import unittest
 
 from src.capacity.phase_b import load_capacity_experiment, run_real_capacity_analysis
+from src.capacity.analysis import allocation_summary_records, maturity_exposure_records
 from src.validation.schemas import load_project_config
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -44,6 +45,19 @@ class CapacityPhaseBTests(unittest.TestCase):
                 self.assertEqual(bindings, {444})
             else:
                 self.assertEqual(bindings, {0})
+
+    def test_allocation_diagnostics_explain_recovery_without_affecting_selection(self):
+        rows = {(row["aum_usd"], row["method"]): row for row in allocation_summary_records(self.result)}
+        hard = rows[("1000000000", "hard_truncate")]
+        sequential = rows[("1000000000", "overflow_sequential_two")]
+        weighted = rows[("1000000000", "overflow_adv_weighted")]
+        self.assertEqual(hard["residual_recovered_notional"], "0.00")
+        self.assertGreater(Decimal(sequential["residual_recovered_notional"]), Decimal(0))
+        self.assertGreater(Decimal(sequential["deferred_notional_share"]), Decimal(0))
+        self.assertGreater(Decimal(weighted["weighted_deferred_maturity_rank"]), Decimal(0))
+        exposure = maturity_exposure_records(self.result)
+        self.assertTrue(any(row["allocation_role"] == "deferred" and row["method"] == "overflow_next"
+                            for row in exposure))
 
 
 if __name__ == "__main__":

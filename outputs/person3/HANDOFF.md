@@ -22,6 +22,9 @@ The tied-with-best methods are: overflow_sequential_two, overflow_adv_weighted. 
 - `capacity_summary.csv`: the four reference-AUM methods and selection fields.
 - `capacity_by_aum.csv`: all four methods at each core AUM.
 - `capacity_diagnostics.csv`: capacity-binding/residual-allocation diagnostics.
+- `capacity_allocation_summary.csv`: residual recovery and deferred-notional exposure by method/AUM.
+- `capacity_maturity_exposure.csv`: post-capacity notional by frozen maturity rank.
 - `tracking_rmse_vs_aum.png`: primary presentation figure.
+- `deferred_exposure_vs_aum.png`: explanatory capacity diagnostic; it is not a ranking metric.
 
 The retained `synthetic_fixture/` directory is a prior plumbing check and is not an empirical finding.
