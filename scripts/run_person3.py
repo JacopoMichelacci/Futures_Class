@@ -8,7 +8,8 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 
-from src.capacity.analysis import diagnostic_records, summary_records
+from src.capacity.analysis import (allocation_summary_records, diagnostic_records,
+                                   maturity_exposure_records, summary_records)
 from src.capacity.phase_b import run_real_capacity_analysis
 from src.validation.schemas import load_project_config
 
@@ -55,6 +56,40 @@ def _plot(result, path):
     plt.close(fig)
 
 
+def _allocation_plot(records, path):
+    """Diagnostic only: show how much constrained residual reached deferred contracts."""
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+
+    methods = sorted({row["method"] for row in records})
+    colors = {"hard_truncate": "#1f77b4", "overflow_next": "#2ca02c",
+              "overflow_sequential_two": "#d62728", "overflow_adv_weighted": "#ff7f0e"}
+    fig, (axis, detail) = plt.subplots(1, 2, figsize=(11, 4.8), gridspec_kw={"width_ratios": [1.7, 1]})
+    for method in methods:
+        rows = sorted((row for row in records if row["method"] == method), key=lambda row: float(row["aum_usd"]))
+        axis.plot([float(row["aum_usd"]) for row in rows],
+                  [100 * float(row["deferred_notional_share"]) for row in rows],
+                  marker="o", label=method, color=colors[method])
+    axis.set_xscale("log")
+    axis.set_xlabel("Fixed AUM (USD)")
+    axis.set_ylabel("Deferred share of post-capacity notional (%)")
+    axis.set_title("Where recovered residual exposure goes")
+    axis.grid(alpha=0.25)
+    axis.legend()
+    reference = [row for row in records if row["aum_usd"] == "1000000000"]
+    detail.bar([row["method"] for row in reference],
+               [100 * float(row["residual_recovery_rate"]) for row in reference],
+               color=[colors[row["method"]] for row in reference])
+    detail.tick_params(axis="x", labelrotation=90)
+    detail.set_ylabel("Primary residual recovered (%)")
+    detail.set_title("$1bn residual recovery")
+    detail.grid(axis="y", alpha=0.25)
+    fig.tight_layout()
+    fig.savefig(path, dpi=180)
+    plt.close(fig)
+
+
 def _handoff(result):
     reference = result["reference_result"]
     selection = reference["selection"]
@@ -91,7 +126,10 @@ The tied-with-best methods are: {tied}. {tie_detail}The simpler tied method is s
 - `capacity_summary.csv`: the four reference-AUM methods and selection fields.
 - `capacity_by_aum.csv`: all four methods at each core AUM.
 - `capacity_diagnostics.csv`: capacity-binding/residual-allocation diagnostics.
+- `capacity_allocation_summary.csv`: residual recovery and deferred-notional exposure by method/AUM.
+- `capacity_maturity_exposure.csv`: post-capacity notional by frozen maturity rank.
 - `tracking_rmse_vs_aum.png`: primary presentation figure.
+- `deferred_exposure_vs_aum.png`: explanatory capacity diagnostic; it is not a ranking metric.
 
 The retained `synthetic_fixture/` directory is a prior plumbing check and is not an empirical finding.
 """
@@ -105,12 +143,16 @@ def main():
     config = load_project_config(ROOT / "config/project.yaml")
     result = run_real_capacity_analysis(args.handoff_dir, config)
     records = summary_records(result)
+    allocation_records = allocation_summary_records(result)
     reference_aum = result["reference_result"]["aum"]
     reference_records = [row for row in records if row["aum_usd"] == format(reference_aum, "f")]
     write_csv(args.out / "capacity_summary.csv", reference_records)
     write_csv(args.out / "capacity_by_aum.csv", records)
     write_csv(args.out / "capacity_diagnostics.csv", diagnostic_records(result))
+    write_csv(args.out / "capacity_allocation_summary.csv", allocation_records)
+    write_csv(args.out / "capacity_maturity_exposure.csv", maturity_exposure_records(result))
     _plot(result, args.out / "tracking_rmse_vs_aum.png")
+    _allocation_plot(allocation_records, args.out / "deferred_exposure_vs_aum.png")
     (args.out / "HANDOFF.md").write_text(_handoff(result))
     print(json.dumps({"mode": "frozen_section0_phase_b", "findings": True,
                       "preflight": result["preflight"], "selection": result["reference_result"]["selection"],

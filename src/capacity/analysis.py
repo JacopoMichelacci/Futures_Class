@@ -238,3 +238,65 @@ def diagnostic_records(result):
                     "flags": ";".join(row["flags"]),
                 })
     return records
+
+
+def allocation_summary_records(result):
+    """Aggregate residual recovery and deferred exposure; these are diagnostics.
+
+    They explain how methods differ without becoming a second method-selection
+    criterion. Values are post-capacity fractional notionals, before the common
+    fixed rounding stage.
+    """
+    records = []
+    for aum, comparison in sorted(result["results"].items()):
+        for method, portfolio in comparison["portfolios"].items():
+            diagnostics = portfolio.diagnostics
+            primary = [row for row in portfolio.rows if row.target_notional is not None]
+            deferred = [row for row in portfolio.rows if row.target_notional is None]
+            requested = sum((row["requested_notional"] for row in diagnostics), Decimal(0))
+            residual = sum((row["primary_residual_notional"] for row in diagnostics), Decimal(0))
+            unimplemented = sum((row["unimplemented_notional"] for row in diagnostics), Decimal(0))
+            recovered = residual - unimplemented
+            primary_notional = sum((row.post_capacity_notional for row in primary), Decimal(0))
+            deferred_notional = sum((row.post_capacity_notional for row in deferred), Decimal(0))
+            implemented = primary_notional + deferred_notional
+            weighted_rank = (sum((row.post_capacity_notional * Decimal(row.maturity_rank) for row in deferred), Decimal(0))
+                             / deferred_notional if deferred_notional else None)
+            records.append({
+                "experiment": result["label"], "aum_usd": format(aum, "f"), "method": method.value,
+                "requested_notional": format(requested, ".2f"),
+                "primary_residual_notional": format(residual, ".2f"),
+                "residual_recovered_notional": format(recovered, ".2f"),
+                "residual_recovery_rate": format(recovered / residual, ".6f") if residual else "0.000000",
+                "unimplemented_notional": format(unimplemented, ".2f"),
+                "primary_post_capacity_notional": format(primary_notional, ".2f"),
+                "deferred_post_capacity_notional": format(deferred_notional, ".2f"),
+                "deferred_notional_share": format(deferred_notional / implemented, ".6f") if implemented else "0.000000",
+                "weighted_deferred_maturity_rank": (format(weighted_rank, ".6f")
+                                                     if weighted_rank is not None else None),
+            })
+    return records
+
+
+def maturity_exposure_records(result):
+    """Aggregate post-capacity exposure by absolute frozen maturity rank."""
+    records = []
+    for aum, comparison in sorted(result["results"].items()):
+        for method, portfolio in comparison["portfolios"].items():
+            total = sum((row.post_capacity_notional for row in portfolio.rows), Decimal(0))
+            groups = {}
+            for row in portfolio.rows:
+                role = "primary" if row.target_notional is not None else "deferred"
+                key = (role, row.maturity_rank)
+                groups.setdefault(key, {"notional": Decimal(0), "contracts": set()})
+                groups[key]["notional"] += row.post_capacity_notional
+                groups[key]["contracts"].add(row.contract)
+            for (role, rank), values in sorted(groups.items()):
+                records.append({
+                    "experiment": result["label"], "aum_usd": format(aum, "f"), "method": method.value,
+                    "allocation_role": role, "maturity_rank": rank,
+                    "post_capacity_notional": format(values["notional"], ".2f"),
+                    "post_capacity_notional_share": format(values["notional"] / total, ".6f") if total else "0.000000",
+                    "contracts": ";".join(sorted(values["contracts"])),
+                })
+    return records
