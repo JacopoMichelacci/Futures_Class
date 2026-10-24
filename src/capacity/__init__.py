@@ -27,6 +27,7 @@ from src.capacity.analysis import (
     select_preferred_method,
     summary_records,
 )
+from src.capacity.phase_b import load_capacity_experiment, run_real_capacity_analysis
 
 __all__ = [
     "ADV20Result", "CapacityRow", "CapacityMethod", "CapacityPortfolio",
@@ -38,4 +39,5 @@ __all__ = [
     "deferred_overflow_candidates", "integer_capacity_limit",
     "CapacityExperiment", "compare_capacity_at_aum", "compare_capacity_across_aum",
     "diagnostic_records", "select_preferred_method", "summary_records",
+    "load_capacity_experiment", "run_real_capacity_analysis",
 ]

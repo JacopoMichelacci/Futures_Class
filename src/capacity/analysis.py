@@ -45,6 +45,7 @@ class CapacityExperiment:
     snapshot_end_exclusive: str
     label: str
     rounding_method: str = "nearest"
+    frozen_dates: tuple[str, ...] | None = None
 
 
 def _strategy(method: CapacityMethod) -> str:
@@ -119,8 +120,12 @@ def compare_capacity_at_aum(experiment: CapacityExperiment, aum, min_common_date
         strategies.append(_strategy(method))
     book = HoldingsBook(rows, experiment.calendar, experiment.catalogue)
     dates = sorted({row.date for row in benchmark})
+    if experiment.frozen_dates is not None and tuple(dates) != tuple(experiment.frozen_dates):
+        raise ContractError("Capacity comparison dates do not match the frozen Section 0 mask")
     daily = portfolio_pnl(book, experiment.observations, dates, strategies, fixed_aum,
                           experiment.snapshot_end_exclusive)
+    if experiment.frozen_dates is not None and any(not row.common_valid for row in daily):
+        raise ContractError("Capacity output violates the frozen common valid-date mask")
     rmse = tracking_rmse_bps(daily)
     valid = sum(row.common_valid for row in daily)
     survival = Decimal(valid) / Decimal(len(daily)) if daily else Decimal(0)
