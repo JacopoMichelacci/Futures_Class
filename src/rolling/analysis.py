@@ -12,7 +12,7 @@ from typing import Callable
 
 from src.metrics.portfolio_pnl import portfolio_pnl
 from src.metrics.tracking_rmse_bps import tracking_rmse_bps
-from src.portfolio.holdings import Holding, HoldingsBook
+from src.portfolio.holdings import HoldingsBook
 from src.rolling.rules import (RULES, apply_roll_timing_rule, build_baseline_roll_pairs,
                                build_roll_timing_portfolio, fixed_roll_date)
 from src.validation.schemas import ContractError
@@ -31,10 +31,13 @@ class TimingExperiment:
     observations: object
     baseline_path: object
     benchmark_rows: tuple
-    quantity_for: Callable[[str, str, str], int]  # (commodity, contract, decision_date) -> contracts
+    # Fixed sizing layer: (contract-path rows, strategy) -> implemented Holdings.
+    size_path: Callable[[tuple, str], list]
     fixed_aum: Decimal
     snapshot_end_exclusive: str
     label: str
+    dates: tuple = ()  # Frozen return dates; defaults to the benchmark dates.
+    validity: dict | None = None  # Frozen common mask: date -> bool.
 
 
 def crossover_search_window(baseline_path, pair, calendar, catalogue):
@@ -60,31 +63,26 @@ def timing_decisions(experiment, rule):
 def timing_holdings(experiment, rule, decisions):
     """Implemented rows for the timed contract path, sized by the supplied fixed rule."""
     strategy = f"timing:{rule}"
-    rows = []
-    for position in build_roll_timing_portfolio(experiment.baseline_path, decisions,
-                                                experiment.calendar, experiment.catalogue):
-        quantity = experiment.quantity_for(position["commodity"], position["contract"],
-                                           position["decision_date"])
-        cutoff = position["decision_cutoff"]
-        rows.append(Holding(date=position["date"], strategy=strategy, commodity=position["commodity"],
-                            contract=position["contract"], decision_cutoff=cutoff, formed_at=cutoff,
-                            inputs_as_of=cutoff, implemented_contracts=quantity,
-                            details={"flags": [f"TIMING_{rule.upper()}"]}))
-    return strategy, tuple(rows)
+    path = build_roll_timing_portfolio(experiment.baseline_path, decisions,
+                                       experiment.calendar, experiment.catalogue)
+    return strategy, tuple(experiment.size_path(path, strategy))
 
 
 def compare_timing_rules(experiment, min_common_dates=100, min_survival=Decimal("0.70")):
     """Run all four rules on one common date mask and one fixed AUM."""
-    decisions, implemented, strategies = {}, [], ["benchmark"]
+    decisions, holdings, strategies = {}, {}, ["benchmark"]
     for rule in RULES:
         decisions[rule] = timing_decisions(experiment, rule)
-        strategy, rows = timing_holdings(experiment, rule, decisions[rule])
+        strategy, holdings[rule] = timing_holdings(experiment, rule, decisions[rule])
         strategies.append(strategy)
-        implemented.extend(rows)
+    implemented = [h for rows in holdings.values() for h in rows]
     book = HoldingsBook([*experiment.benchmark_rows, *implemented], experiment.calendar, experiment.catalogue)
-    dates = sorted({r.date for r in experiment.benchmark_rows})
+    dates = list(experiment.dates) or sorted({r.date for r in experiment.benchmark_rows})
+    validity = None
+    if experiment.validity is not None:
+        validity = {(d, s): experiment.validity.get(d) is True for d in dates for s in strategies}
     daily = portfolio_pnl(book, experiment.observations, dates, strategies, experiment.fixed_aum,
-                          experiment.snapshot_end_exclusive)
+                          experiment.snapshot_end_exclusive, validity)
     rmse = tracking_rmse_bps(daily)
     valid = sum(r.common_valid for r in daily)
     survival = Decimal(valid) / Decimal(len(daily))
@@ -109,7 +107,7 @@ def compare_timing_rules(experiment, min_common_dates=100, min_survival=Decimal(
         selection = {**selection, "preferred_rule": None, "resolved": False,
                      "blocked_reason": "coverage_gate_failed"}
     return {"label": experiment.label, "summary": tuple(summary), "decisions": decisions,
-            "gates": gates, "selection": selection, "daily": daily}
+            "holdings": holdings, "gates": gates, "selection": selection, "daily": daily}
 
 
 def select_preferred_rule(rmse_by_rule, tie_tolerance_bps=Decimal("0.1")):

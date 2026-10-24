@@ -97,9 +97,13 @@ def build_synthetic_experiment(fixed_aum=Decimal("100000000")):
                                          benchmark_fractional_contracts=SPEC[root][2] * weight,
                                          details={"flags": ["SYNTHETIC_PART3_HARNESS"]}))
 
-    def quantity_for(commodity, contract, decision_date):
-        return SPEC[commodity][2]
+    def size_path(path, strategy):
+        # Supplied fixed contract count per root, identical for every timing rule.
+        return [Holding(date=r["date"], strategy=strategy, commodity=r["commodity"], contract=r["contract"],
+                        decision_cutoff=r["decision_cutoff"], formed_at=r["decision_cutoff"],
+                        inputs_as_of=r["decision_cutoff"], implemented_contracts=SPEC[r["commodity"]][2])
+                for r in path]
 
     last = date.fromisoformat(dates[-1]) + timedelta(days=1)
-    return TimingExperiment(calendar, catalogue, store, path, tuple(benchmark), quantity_for,
+    return TimingExperiment(calendar, catalogue, store, path, tuple(benchmark), size_path,
                             Decimal(fixed_aum), f"{last.isoformat()}T00:00:00Z", "synthetic_part3_harness")

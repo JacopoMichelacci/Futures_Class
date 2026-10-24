@@ -123,7 +123,7 @@ class ScriptTests(unittest.TestCase):
         refused = subprocess.run([sys.executable, "-B", str(ROOT / "scripts/run_person2.py")],
                                  capture_output=True, text=True)
         self.assertNotEqual(refused.returncode, 0)
-        self.assertIn("frozen Section 0 handoff", refused.stderr)
+        self.assertIn("exactly one of --fixtures or --real", refused.stderr)
         with tempfile.TemporaryDirectory() as tmp:
             ran = subprocess.run([sys.executable, "-B", str(ROOT / "scripts/run_person2.py"), "--fixtures",
                                   "--out", tmp], capture_output=True, text=True, check=True)
