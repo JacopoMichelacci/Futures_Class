@@ -18,9 +18,9 @@ from src.rolling.rules import (RULES, apply_roll_timing_rule, build_baseline_rol
 from src.validation.schemas import ContractError
 
 BASELINE_RULE = "fixed_-5"
-# Pre-specified tie preference: baseline, then the other data-free offset, then
-# the data-dependent crossovers. Volume vs OI has no agreed order (see select).
-SIMPLICITY = {"fixed_-5": 0, "fixed_-10": 1, "volume_crossover": 2, "oi_crossover": 2}
+# Pre-specified tie preference agreed on #27 before any real-data run: baseline,
+# the other data-free offset, then volume (direct trading activity) before OI.
+SIMPLICITY = {"fixed_-5": 0, "fixed_-10": 1, "volume_crossover": 2, "oi_crossover": 3}
 
 
 @dataclass(frozen=True)
@@ -115,8 +115,7 @@ def compare_timing_rules(experiment, min_common_dates=100, min_survival=Decimal(
 def select_preferred_rule(rmse_by_rule, tie_tolerance_bps=Decimal("0.1")):
     """Lowest daily-bp RMSE; differences strictly below the tolerance are ties.
 
-    Ties go to the simplest rule, the baseline first. A tie only between the two
-    crossover rules has no agreed order and is reported unresolved, not chosen.
+    Ties go to the simplest rule in the agreed SIMPLICITY order, baseline first.
     """
     if set(rmse_by_rule) != set(RULES):
         raise ContractError("All four pre-specified timing rules are required")

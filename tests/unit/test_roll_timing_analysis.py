@@ -106,11 +106,12 @@ class SelectionTests(unittest.TestCase):
                                      "volume_crossover": Decimal("10"), "oi_crossover": Decimal("11")})
         self.assertEqual(out["preferred_rule"], "volume_crossover")
 
-    def test_crossover_only_tie_is_reported_unresolved(self):
-        out = select_preferred_rule({"fixed_-5": Decimal("11"), "fixed_-10": Decimal("11"),
-                                     "volume_crossover": Decimal("10"), "oi_crossover": Decimal("10.05")})
-        self.assertFalse(out["resolved"])
-        self.assertIsNone(out["preferred_rule"])
+    def test_crossover_only_tie_prefers_volume_over_oi(self):
+        for volume, oi in (("10", "10.05"), ("10.05", "10")):
+            out = select_preferred_rule({"fixed_-5": Decimal("11"), "fixed_-10": Decimal("11"),
+                                         "volume_crossover": Decimal(volume), "oi_crossover": Decimal(oi)})
+            self.assertTrue(out["resolved"])
+            self.assertEqual(out["preferred_rule"], "volume_crossover")
 
     def test_requires_all_four_rules(self):
         with self.assertRaises(ContractError):
