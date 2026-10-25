@@ -1,0 +1,5 @@
+strand,fixed_aum,candidate_dates,common_valid_dates,survival,passed,first_return,last_return
+destination,10000000,148,148,1,True,2026-03-02,2026-09-30
+timing,10000000,148,148,1,True,2026-03-02,2026-09-30
+capacity,1000000000,148,148,1,True,2026-03-02,2026-09-30
+rounding,1000000,148,148,1,True,2026-03-02,2026-09-30

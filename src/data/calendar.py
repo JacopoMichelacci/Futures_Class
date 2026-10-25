@@ -42,7 +42,7 @@ class SessionCalendar:
     Fixture times are synthetic. Production shortened-session schedules remain a
     Phase B data prerequisite; there is deliberately no universal 13:15 default.
     """
-    def __init__(self, records):
+    def __init__(self, records, maturity_dates=None):
         records = tuple(records)
         dates = [r.trading_date for r in records]
         if len(records) < 2 or dates != sorted(set(dates)):
@@ -54,6 +54,22 @@ class SessionCalendar:
         self.indices = MappingProxyType({d: i for i, d in enumerate(dates)})
         self.sessions = MappingProxyType({r.trading_date: r for r in records})
         self.calendar_id = hashlib.sha256(json.dumps([r.__dict__ for r in records], sort_keys=True).encode()).hexdigest()
+        # Forward dates count maturity only; they confer no decision/valuation
+        # timestamp. This avoids inventing future shortened-session cut-offs.
+        horizon = self.dates if maturity_dates is None else tuple(maturity_dates)
+        if any(not isinstance(day, str) for day in horizon):
+            raise ContractError("Explicit ISO maturity session dates required")
+        if horizon != tuple(sorted(set(horizon))) or horizon[:len(self.dates)] != self.dates:
+            raise ContractError("Maturity dates must extend the exact explicit session prefix")
+        try:
+            for day in horizon:
+                if date.fromisoformat(day).isoformat() != day:
+                    raise ValueError
+        except (TypeError, ValueError) as exc:
+            raise ContractError("Explicit ISO maturity session dates required") from exc
+        self.maturity_dates = horizon
+        self.maturity_indices = MappingProxyType({d: i for i, d in enumerate(horizon)})
+        self.maturity_calendar_id = hashlib.sha256(json.dumps(horizon).encode()).hexdigest()
 
     def decision(self, return_date):
         if return_date not in self.indices or self.indices[return_date] == 0:
