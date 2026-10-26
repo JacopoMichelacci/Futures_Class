@@ -1,0 +1,5 @@
+experiment,aum_usd,method,tracking_rmse_bps,common_valid_dates,candidate_dates,survival,binding_target_count,unimplemented_notional,tied_with_best,preferred_at_aum,common_mask_gate_passed
+frozen_section0_phase_b,1000000000,hard_truncate,87.981363,148,148,1.0000,444,94923649062.50,False,False,True
+frozen_section0_phase_b,1000000000,overflow_next,66.999580,148,148,1.0000,444,66399357087.50,False,False,True
+frozen_section0_phase_b,1000000000,overflow_sequential_two,57.282698,148,148,1.0000,444,52941438387.50,True,True,True
+frozen_section0_phase_b,1000000000,overflow_adv_weighted,57.305883,148,148,1.0000,444,52941438387.50,True,False,True

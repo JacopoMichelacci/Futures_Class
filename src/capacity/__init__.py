@@ -19,6 +19,17 @@ from src.capacity.rules import (
     deferred_overflow_candidates,
     integer_capacity_limit,
 )
+from src.capacity.analysis import (
+    CapacityExperiment,
+    allocation_summary_records,
+    compare_capacity_at_aum,
+    compare_capacity_across_aum,
+    diagnostic_records,
+    maturity_exposure_records,
+    select_preferred_method,
+    summary_records,
+)
+from src.capacity.phase_b import load_capacity_experiment, run_real_capacity_analysis
 
 __all__ = [
     "ADV20Result", "CapacityRow", "CapacityMethod", "CapacityPortfolio",
@@ -28,4 +39,7 @@ __all__ = [
     "capacity_rounding_targets",
     "compute_adv20", "decision_time_dollar_contract_value",
     "deferred_overflow_candidates", "integer_capacity_limit",
+    "CapacityExperiment", "allocation_summary_records", "compare_capacity_at_aum", "compare_capacity_across_aum",
+    "diagnostic_records", "maturity_exposure_records", "select_preferred_method", "summary_records",
+    "load_capacity_experiment", "run_real_capacity_analysis",
 ]
