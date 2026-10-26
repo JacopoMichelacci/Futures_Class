@@ -1,0 +1,17 @@
+experiment,aum_usd,method,tracking_rmse_bps,common_valid_dates,candidate_dates,survival,binding_target_count,unimplemented_notional,tied_with_best,preferred_at_aum,common_mask_gate_passed
+frozen_section0_phase_b,1000000,hard_truncate,8.021906,148,148,1.0000,0,0.00,True,True,True
+frozen_section0_phase_b,1000000,overflow_next,8.021906,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,1000000,overflow_sequential_two,8.021906,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,1000000,overflow_adv_weighted,8.021906,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,10000000,hard_truncate,7.258071,148,148,1.0000,0,0.00,True,True,True
+frozen_section0_phase_b,10000000,overflow_next,7.258071,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,10000000,overflow_sequential_two,7.258071,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,10000000,overflow_adv_weighted,7.258071,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,100000000,hard_truncate,7.248176,148,148,1.0000,0,0.00,True,True,True
+frozen_section0_phase_b,100000000,overflow_next,7.248176,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,100000000,overflow_sequential_two,7.248176,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,100000000,overflow_adv_weighted,7.248176,148,148,1.0000,0,0.00,True,False,True
+frozen_section0_phase_b,1000000000,hard_truncate,87.981363,148,148,1.0000,444,94923649062.50,False,False,True
+frozen_section0_phase_b,1000000000,overflow_next,66.999580,148,148,1.0000,444,66399357087.50,False,False,True
+frozen_section0_phase_b,1000000000,overflow_sequential_two,57.282698,148,148,1.0000,444,52941438387.50,True,True,True
+frozen_section0_phase_b,1000000000,overflow_adv_weighted,57.305883,148,148,1.0000,444,52941438387.50,True,False,True
