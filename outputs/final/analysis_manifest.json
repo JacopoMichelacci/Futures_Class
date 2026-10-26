@@ -1,0 +1,53 @@
+{
+  "data_kind": "real_frozen_databento_section0",
+  "date_count": 148,
+  "dates": [
+    "2026-03-02",
+    "2026-09-30"
+  ],
+  "mean_days_to_fnd": {
+    "baseline": "28.87612612612612612612612613",
+    "destination_only": "69.95495495495495495495495495",
+    "integrated": "82.43918918918918918918918919"
+  },
+  "output_hashes": {
+    "HANDOFF.md": "6ff4fab4516b36f4259d1bed20181dba1ec0c2d4e991a1d4149dc8d9a5a593ab",
+    "baseline_vs_integrated_daily.csv": "94fd28f04287419a1f6a22a5ee481eaff8f77e2d608049407213eb3f1b0db15d",
+    "integrated_holdings.csv": "6759e7fee145e30a42bdc8d128d8f028d507497e8740d49e7074ab50509c83c6",
+    "integrated_roll_events.csv": "ee14cae7be8180b87dd05593e2bd5b28886b5bc488c99d6942e9b03e75981304",
+    "integrated_summary.csv": "bbfd2178f033558bd5b95da456abedc2e31d354ab1e708c4e2f72c55708b69c0",
+    "maturity_baseline_vs_integrated.png": "5aa9cb8762fbe7f7ef3cab95ac1670620b55358ebe71e421c872814a24571397",
+    "strand_selected_vs_baseline.png": "6baafc07f83aa4c4d66904230e17d6be15bc30f8ac26040d368ab42e9a38cfc6",
+    "strand_selections.csv": "379a1a390438eebf208eb9b270d3d0d923787948c9efa680e67fd7b981d777c6",
+    "tracking_rmse_baseline_vs_integrated_by_aum.png": "6c0f142b214793ceba1fb1b442a862a2eaa18244d347f455a2d4471039954478"
+  },
+  "section0_output_hashes": {
+    "baseline_contract_path.parquet": "a034942f97c59b000e6dbb89b4b21e8030b894d62d7c4a91d22801675bedd508",
+    "baseline_daily.parquet": "044722f6cb32c10c5d46f392bb72f72beac9caea93c130ebe8649cf3428ec122",
+    "baseline_holdings.parquet": "80258cb8decbc4f2a5784808b226ed7d8e6009036034caccb638bb9d1e8ae561",
+    "benchmark_holdings.parquet": "39a0061ff9cc8d911b6caf578c05ce16b228265a0527b668d34d93087f4cb8c1",
+    "common_masks.parquet": "577e7ac41efdebe68cde996f3bd4390840f32375c8c8572b284afef38a4123bf",
+    "contract_returns.parquet": "b765a4db3d29087ee13953d4f40ee63072c3f2ceecc9675938335b781fc4204a",
+    "contracts.parquet": "8c81366592cdedca32e43cec0a7753514ab59039803bcb9d73e4360df32b7e1a",
+    "decision_inputs.parquet": "bafa5c711c0660ae76f37ccc843f3467f8619516d18aa5c4f61ef094a86c019c",
+    "eligible_curve.parquet": "f06bf12477a0f47a54cd1e4070bc2b14feffd22c7d5e88a1950536078ffa99e7",
+    "freeze.json": "b34effbe2124c26378b9a70488fb73b6a24900864c8ba54d03adec3c61a063fb",
+    "post_capacity_targets.parquet": "eda8069f3ee522fc96e328c0aa2cb999398a0bdf08d9cf99d1758cc6214d1a43",
+    "provenance.json": "8ca9df7ebcf27b26e23e8b8e82f3714e531bfa77d71a36b4907fa60fb840fdea",
+    "roll_events.parquet": "9a9e5df84701b175a5abd99961d6fcb42c1e02cf766a89b7531180dc1591dcdc",
+    "timing_inputs.parquet": "5614676b1b318b0f67fd4664098b1af5515ab75dc9e8b77d1ec5e19a05a9eaf0",
+    "tracking_coverage_report.csv": "dab32d4e5be171a5aa5b25af8fd356c12c0b74ecc4ffe71327f330a4edb2618f"
+  },
+  "selections": {
+    "capacity": "overflow_sequential_two",
+    "destination": "target_75",
+    "rounding": "toward_zero",
+    "timing": "oi_crossover"
+  },
+  "unavailable": [
+    {
+      "fixed_aum": 1000000000,
+      "reason": "overflow candidate(s) outside the frozen Section 0 statistics universe: ZSK7"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+commodity,scheduled_destination_date,baseline_outgoing_contract,baseline_destination,outgoing_contract,incoming_contract,search_start,roll_decision_date,first_incoming_interval_end,sessions_before_scheduled_date,outgoing_days_to_fnd_at_roll,incoming_days_to_fnd_at_roll,fallback_to_scheduled_date,triggered_on_first_window_session,trigger_source_date,trigger_outgoing_value,trigger_incoming_value
+ZC,2026-04-23,ZCK6,ZCN6,ZCK6,ZCU6,2026-02-27,2026-04-22,2026-04-23,1,6,90,False,False,2026-04-21,271214,291382
+ZC,2026-06-23,ZCN6,ZCU6,ZCU6,ZCZ6,2026-04-23,2026-04-23,2026-04-24,41,89,152,False,True,2026-04-22,293353,486268
+ZC,2026-08-24,ZCU6,ZCZ6,ZCZ6,ZCH7,2026-06-23,2026-08-24,2026-08-25,0,68,128,True,False,,,
+ZS,2026-04-23,ZSK6,ZSN6,ZSK6,ZSQ6,2026-02-27,2026-04-23,2026-04-24,0,5,68,True,False,,,
+ZS,2026-06-23,ZSN6,ZSQ6,ZSQ6,ZSX6,2026-04-23,2026-04-23,2026-04-24,41,68,132,False,True,2026-04-22,43166,222940
+ZS,2026-07-24,ZSQ6,ZSU6,ZSX6,ZSF7,2026-06-23,2026-07-24,2026-07-27,0,69,111,True,False,,,
+ZS,2026-08-24,ZSU6,ZSX6,ZSF7,ZSH7,2026-07-24,2026-08-24,2026-08-25,0,90,128,True,False,,,
+ZW,2026-04-23,ZWK6,ZWN6,ZWK6,ZWU6,2026-02-27,2026-04-20,2026-04-21,3,8,92,False,False,2026-04-17,72628,79031
+ZW,2026-06-23,ZWN6,ZWU6,ZWU6,ZWZ6,2026-04-23,2026-06-23,2026-06-24,0,48,111,True,False,,,
+ZW,2026-08-24,ZWU6,ZWZ6,ZWZ6,ZWH7,2026-06-23,2026-08-24,2026-08-25,0,68,128,True,False,,,
