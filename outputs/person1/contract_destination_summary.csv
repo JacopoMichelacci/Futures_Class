@@ -1,0 +1,5 @@
+rule,tracking_rmse_bps,common_valid_dates,candidate_dates,survival_fraction,coverage_passed,reference_aum_usd,roll_count,fallback_count,mean_maturity_sessions
+next_deferred,7.2580708144440385,148,148,1.0,True,10000000.0,10,0,28.876126126126128
+second_deferred,13.950015637737952,148,148,1.0,True,10000000.0,10,0,98.30630630630631
+target_45,6.535032851507425,148,148,1.0,True,10000000.0,10,0,34.409909909909906
+target_75,5.622586114307333,148,148,1.0,True,10000000.0,10,0,69.95495495495496
