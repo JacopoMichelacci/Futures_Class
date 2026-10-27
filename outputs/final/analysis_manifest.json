@@ -20,7 +20,7 @@
     "maturity_baseline_vs_integrated.png": "5aa9cb8762fbe7f7ef3cab95ac1670620b55358ebe71e421c872814a24571397",
     "strand_selected_vs_baseline.png": "6baafc07f83aa4c4d66904230e17d6be15bc30f8ac26040d368ab42e9a38cfc6",
     "strand_selections.csv": "379a1a390438eebf208eb9b270d3d0d923787948c9efa680e67fd7b981d777c6",
-    "tracking_rmse_baseline_vs_integrated_by_aum.png": "6c0f142b214793ceba1fb1b442a862a2eaa18244d347f455a2d4471039954478"
+    "tracking_rmse_baseline_vs_integrated_by_aum.png": "4228d2c0f093112c3be823dae30218b611857176a3f72ea2d3cb9690da8b1f21"
   },
   "section0_output_hashes": {
     "baseline_contract_path.parquet": "a034942f97c59b000e6dbb89b4b21e8030b894d62d7c4a91d22801675bedd508",
