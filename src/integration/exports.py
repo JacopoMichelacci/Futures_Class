@@ -95,26 +95,55 @@ def strand_chart(rows, path):
 
 def integrated_chart(rows, path):
     plt = _plt()
-    evaluated = [r for r in rows if r["status"] == "evaluated"]
     fig, ax = plt.subplots(figsize=(11, 5.5))
-    x = range(len(evaluated))
-    base = [float(r["baseline_rmse_bps"]) for r in evaluated]
-    integ = [float(r["integrated_rmse_bps"]) for r in evaluated]
-    ax.bar([i - 0.2 for i in x], base, 0.4, color="#9aa5b1", label="Original baseline")
-    ax.bar([i + 0.2 for i in x], integ, 0.4, color="#bf6210", label="Integrated (all four selected rules)")
-    for i, r in enumerate(evaluated):
-        ax.text(i - 0.2, base[i], f"{base[i]:.2f}", ha="center", va="bottom", fontsize=10)
-        ax.text(i + 0.2, integ[i], f"{integ[i]:.2f}\n({float(r['change_pct']):+.0f}%)", ha="center",
-                va="bottom", fontsize=10)
-    ax.set_xticks(list(x), [AUM_LABEL[r["fixed_aum"]] for r in evaluated])
-    ax.set_ylim(0, max(base + integ) * 1.3)
+    evaluated = [r for r in rows if r["status"] == "evaluated"]
+    top = max(max(float(r["baseline_rmse_bps"]), float(r["integrated_rmse_bps"])) for r in evaluated)
+    for i, r in enumerate(rows):
+        if r["status"] != "evaluated":
+            ax.text(i, top * 0.35, "N/A\nnot evaluable under the\nfrozen Section 0 universe", ha="center",
+                    va="center", fontsize=10, color="#555555")
+            continue
+        base, integ = float(r["baseline_rmse_bps"]), float(r["integrated_rmse_bps"])
+        ax.bar(i - 0.2, base, 0.4, color="#9aa5b1", label="Original baseline" if i == 0 else None)
+        ax.bar(i + 0.2, integ, 0.4, color="#bf6210", label="Integrated: all four selected rules" if i == 0 else None)
+        ax.text(i - 0.2, base, f"{base:.2f}", ha="center", va="bottom", fontsize=10)
+        ax.text(i + 0.2, integ, f"{integ:.2f}\n({float(r['change_pct']):+.0f}%)", ha="center", va="bottom",
+                fontsize=11, fontweight="bold")
+    ax.set_xticks(range(len(rows)), [AUM_LABEL[r["fixed_aum"]] for r in rows])
+    ax.set_xlim(-0.6, len(rows) - 0.4)
+    ax.set_ylim(0, top * 1.3)
     ax.set_xlabel("Fixed AUM")
     ax.set_ylabel("Tracking RMSE (daily bp)")
-    missing = [AUM_LABEL[r["fixed_aum"]] for r in rows if r["status"] != "evaluated"]
-    note = f"\n{', '.join(missing)} not evaluable: a required overflow contract is outside the frozen data." if missing else ""
-    ax.set_title("Section 5: original baseline vs integrated implementation (lower is better)\n"
-                 f"Same benchmark, AUM denominator and {SAMPLE}.{note}", loc="left", fontsize=12)
+    ax.set_title("Combining the four winners makes tracking worse than the original baseline\n"
+                 f"Lower is better. Same benchmark, AUM denominator and {SAMPLE}.", loc="left", fontsize=12)
     ax.legend(frameon=False, loc="upper right")
+    fig.tight_layout()
+    fig.savefig(path, dpi=150)
+    plt.close(fig)
+
+
+def benchmark_chart(result, path, commodity="ZC", aum=10000000):
+    """How the benchmark holds a constant 60-session maturity: weights across contracts over time."""
+    plt = _plt()
+    import datetime as dt
+    import matplotlib.dates as mdates
+    from src.section0.phase_b import read_table
+    rows = [r for r in read_table(Path(result["handoff_dir"]) / "benchmark_holdings.parquet")
+            if r["fixed_aum"] == aum and r["commodity"] == commodity]
+    dates = sorted({r["date"] for r in rows})
+    contracts = sorted({r["contract"] for r in rows}, key=lambda c: result["inputs"].catalogue[c].anchor)
+    weight = {(r["date"], r["contract"]): float(r["interpolation_weight"]) for r in rows}
+    fig, ax = plt.subplots(figsize=(11, 4.8))
+    ax.stackplot([dt.date.fromisoformat(d) for d in dates],
+                 [[weight.get((d, c), 0.0) for d in dates] for c in contracts], labels=contracts,
+                 colors=["#194b74", "#bf6210", "#25816b", "#964a9f", "#9aa5b1"][:len(contracts)], alpha=0.85)
+    ax.xaxis.set_major_formatter(mdates.DateFormatter("%b"))
+    ax.set_ylim(0, 1)
+    ax.set_ylabel(f"Share of {commodity} benchmark exposure")
+    ax.set_title(f"The benchmark: each commodity blends the two contracts that bracket 60 trading sessions to "
+                 f"first notice\n({commodity} shown; ZS and ZW work the same way. Equal notional across ZC, ZS, ZW.)",
+                 loc="left", fontsize=12)
+    ax.legend(frameon=False, ncol=len(contracts), loc="upper center", bbox_to_anchor=(0.5, -0.12))
     fig.tight_layout()
     fig.savefig(path, dpi=150)
     plt.close(fig)
@@ -212,6 +241,7 @@ def write_outputs(result, outputs_dir, out_dir):
     strand_chart(selections, directory / "strand_selected_vs_baseline.png")
     integrated_chart(summary, directory / "tracking_rmse_baseline_vs_integrated_by_aum.png")
     maturity_chart(result, directory / "maturity_baseline_vs_integrated.png")
+    benchmark_chart(result, directory / "benchmark_construction.png")
     (directory / "HANDOFF.md").write_text(handoff_text(result, selections, summary))
     names = sorted(p.name for p in directory.iterdir() if p.name != "analysis_manifest.json")
     manifest = {"data_kind": "real_frozen_databento_section0", "selections": result["selections"],

@@ -72,7 +72,8 @@ class Section5Tests(unittest.TestCase):
             manifest = write_outputs(self.r, OUTPUTS, tmp)
             for name in ("integrated_summary.csv", "baseline_vs_integrated_daily.csv", "strand_selections.csv",
                          "integrated_roll_events.csv", "tracking_rmse_baseline_vs_integrated_by_aum.png",
-                         "strand_selected_vs_baseline.png", "maturity_baseline_vs_integrated.png", "HANDOFF.md"):
+                         "strand_selected_vs_baseline.png", "maturity_baseline_vs_integrated.png",
+                         "benchmark_construction.png", "HANDOFF.md"):
                 self.assertIn(name, manifest["output_hashes"])
             text = (Path(tmp) / "HANDOFF.md").read_text()
             self.assertIn("not evaluable", text)

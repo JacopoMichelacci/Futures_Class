@@ -291,7 +291,7 @@ def run_section5(handoff_dir, outputs_dir, config):
             "mean_days_to_fnd": {"baseline": _mean_days(inputs.baseline_path.positions, inputs.curve),
                                  "destination_only": _mean_days(destination_path.positions, inputs.curve),
                                  "integrated": _mean_days(path, inputs.curve)},
-            "input_hashes": inputs.output_hashes, "inputs": inputs}
+            "input_hashes": inputs.output_hashes, "inputs": inputs, "handoff_dir": str(handoff_dir)}
 
 
 def strategy_rmse(inputs, rules, aum, weights):

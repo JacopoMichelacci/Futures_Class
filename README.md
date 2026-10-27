@@ -38,7 +38,7 @@ Each winner run alone through the Section 5 pipeline reproduces its strand's res
 
 The two maturity rules compound. The 75-session destination moves corn to September and soybeans to August; open-interest timing then sees the next, more liquid contract (December corn, November soybeans) already leading and rolls on immediately. With destination and timing alone, tracking is already worse than baseline at $10m (8.07 bp). At $1m, where positions are only about 5–15 contracts per commodity, always rounding down adds most of the remaining gap. At $100m, the far-dated contracts are thinly traded, so capacity binds, and the selected overflow rule recovers much of the loss. A related finding in the timing strand alone: thin September contracts triggered crossovers immediately, so the crossover rules largely skipped them.
 
-Limitations: the **$1bn integrated result is not evaluable**, because overflow from the integrated soybean positions requires a contract (ZSK7) outside the frozen data universe. We did not substitute data. Results come from one seven-month sample, exclude transaction costs and collateral yield, and the strand rules were chosen independently at different reference AUMs and deliberately not re-optimised jointly.
+Limitations: the **$1bn integrated result is not evaluable under the frozen Section 0 universe**. The integrated sequential-overflow path requires ZSK7, which lacked the frozen market-data coverage needed for evaluation, and we did not substitute data. Results come from one seven-month sample, exclude transaction costs and collateral yield, and the strand rules were chosen independently at different reference AUMs and deliberately not re-optimised jointly.
 
 ---
 
@@ -46,7 +46,7 @@ Limitations: the **$1bn integrated result is not evaluable**, because overflow f
 
 | Path | Contents |
 |---|---|
-| `Section 5 - Integrated Portfolio/Section 5.ipynb` | **Presentation notebook**: four strand summaries, integration, conclusion |
+| `Section 5 - Integrated Portfolio/Section 5.ipynb` | **Presentation notebook**: six sections (benchmark, four strands, integrated result) |
 | `Section 0`–`Section 4` notebooks | Setup and each strand's analysis (destination, timing, capacity, rounding) |
 | `data/section0/` | Frozen, hash-verified processed Databento bundle (~1.7 MB) used by every analysis |
 | `outputs/person1`–`person4`, `outputs/final` | Strand results and Section 5 results (CSVs, charts, `HANDOFF.md`) |
@@ -71,4 +71,4 @@ uv run --no-sync python -B scripts/run_section5.py                          # in
 
 All commands run offline from the committed `data/section0` bundle, which is processed from Databento GLBX.MDP3 CME data. No API key is needed. Section 0's shared loader verifies the bundle's input hashes, and these commands regenerate the committed summary tables exactly. To present, open `Section 5 - Integrated Portfolio/Section 5.ipynb` with the project's `.venv` interpreter as the kernel and run all cells.
 
-**Rebuilding Section 0 from raw data.** Raw Databento downloads are intentionally not committed. The frozen bundle was built from locally acquired, validated production files with `scripts/run_section0.py --production-dir … --inventory-dir …` (see `docs/section0_phase_b.md`). Re-acquiring the raw data requires a Databento account with CME GLBX.MDP3 access and incurs data costs. Keep any `DATABENTO_API_KEY` in a local, git-ignored `.env`, never in the repository.
+**Supported reproduction path.** The committed `data/section0` bundle is the supported way to reproduce every result above. It was produced from Databento CME GLBX.MDP3 data. Raw acquisition was performed locally, the raw downloads are intentionally not committed, and the repository does not include a general raw-download script. The bundle builder `scripts/run_section0.py --production-dir … --inventory-dir …` (see `docs/section0_phase_b.md`) only works with those local raw files.
